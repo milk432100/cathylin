@@ -4,14 +4,11 @@
 /* 對應 HTML5相同標籤或者呼叫 id(標籤 自訂 名稱-英文、數字、底線_、唯一) ；class (可重複，共用樣式)*/
 header {
   width: 100%;
-  height: 50px;
-  background-color: beige;
 }
 
 main {
   /* 寬度 高度 背景色 文字色 */
   width: 100%;
-  height: 300px;
   background-color: #fff3d1;
   color: burlywood;
 }/*# sourceMappingURL=style.css.map */
