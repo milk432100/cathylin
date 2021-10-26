@@ -13,50 +13,32 @@ header {
 }
 
 // 加入判斷裝置的斷點
-// 超小裝置 <576px
+// 超小裝置 <576px esmall
 @media screen and (max-width: 576px) {
-    #main {
-        width: 50px;
-        background-color: azure;
-    }
+    @import "_02esmall.scss";
 }
 
-// 小裝置 >= 576px　min-width (最小寬度 含等於)
+// 小裝置 >= 576px　min-width (最小寬度 含等於) small
 @media screen and (min-width: 576px) {
-    #main {
-        width: 70px;
-        background-color: orchid;
-    }
+    @import "_03small.scss";
 }
 
-// 平板裝置 >= 768px
+// 平板裝置 >= 768px medium
 @media screen and (min-width: 768px) {
-    #main {
-        width: 100px;
-        background-color: palegoldenrod;
-    }
+    @import "_04medium.scss";
 }
 
-// 大平板裝置 >=992px
+// 大平板裝置 >=992px large
 @media screen and (min-width: 992px) {
-    #main {
-        width: 120px;
-        background-color: palevioletred;
-    }
+    @import "_05large.scss";
 }
 
-// 螢幕裝置 >=1200px
+// 螢幕裝置 >=1200px xlarge
 @media screen and (min-wudth: 1200px) {
-    #main {
-        width: 150px;
-        background-color: plum;
-    }
+    @import "_06xlarge.scss";
 }
 
-// 超大螢幕裝置 >=1400px
+// 超大螢幕裝置 >=1400px xxlarge
 @media screen and (min-width: 1400px) {
-    #main {
-        width: 170px;
-        background-color: cornsilk;
-    }
+    @import "_07xxlarge.scss";
 }
