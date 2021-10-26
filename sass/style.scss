@@ -16,7 +16,47 @@ header {
 // 超小裝置 <576px
 @media screen and (max-width: 576px) {
     #main {
-        width: 100px;
+        width: 50px;
         background-color: azure;
+    }
+}
+
+// 小裝置 >= 576px　min-width (最小寬度 含等於)
+@media screen and (min-width: 576px) {
+    #main {
+        width: 70px;
+        background-color: orchid;
+    }
+}
+
+// 平板裝置 >= 768px
+@media screen and (min-width: 768px) {
+    #main {
+        width: 100px;
+        background-color: palegoldenrod;
+    }
+}
+
+// 大平板裝置 >=992px
+@media screen and (min-width: 992px) {
+    #main {
+        width: 120px;
+        background-color: palevioletred;
+    }
+}
+
+// 螢幕裝置 >=1200px
+@media screen and (min-wudth: 1200px) {
+    #main {
+        width: 150px;
+        background-color: plum;
+    }
+}
+
+// 超大螢幕裝置 >=1400px
+@media screen and (min-width: 1400px) {
+    #main {
+        width: 170px;
+        background-color: cornsilk;
     }
 }

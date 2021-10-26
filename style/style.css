@@ -15,7 +15,37 @@ header {
 
 @media screen and (max-width: 576px) {
   #main {
-    width: 100px;
+    width: 50px;
     background-color: azure;
+  }
+}
+@media screen and (min-width: 576px) {
+  #main {
+    width: 70px;
+    background-color: orchid;
+  }
+}
+@media screen and (min-width: 768px) {
+  #main {
+    width: 100px;
+    background-color: palegoldenrod;
+  }
+}
+@media screen and (min-width: 992px) {
+  #main {
+    width: 120px;
+    background-color: palevioletred;
+  }
+}
+@media screen and (min-wudth: 1200px) {
+  #main {
+    width: 150px;
+    background-color: plum;
+  }
+}
+@media screen and (min-width: 1400px) {
+  #main {
+    width: 170px;
+    background-color: cornsilk;
   }
 }/*# sourceMappingURL=style.css.map */
