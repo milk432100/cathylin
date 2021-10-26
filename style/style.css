@@ -6,7 +6,7 @@ header {
   width: 100%;
 }
 
-main {
+#main {
   /* 寬度 高度 背景色 文字色 */
   width: 100%;
   background-color: #fff3d1;
