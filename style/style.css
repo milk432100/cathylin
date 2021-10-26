@@ -11,4 +11,11 @@ header {
   width: 100%;
   background-color: #fff3d1;
   color: burlywood;
+}
+
+@media screen and (max-width: 576px) {
+  #main {
+    width: 100px;
+    background-color: azure;
+  }
 }/*# sourceMappingURL=style.css.map */

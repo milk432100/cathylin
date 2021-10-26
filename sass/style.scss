@@ -11,3 +11,12 @@ header {
     background-color: rgb(255, 243, 209);
     color: burlywood;
 }
+
+// 加入判斷裝置的斷點
+// 超小裝置 <576px
+@media screen and (max-width: 576px) {
+    #main {
+        width: 100px;
+        background-color: azure;
+    }
+}
