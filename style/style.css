@@ -18,9 +18,11 @@ header {
 }
 
 @media screen and (max-width: 576px) {
-  #main {
-    width: 50px;
-    background-color: azure;
+  header nav #portofolio,
+header nav #about,
+header nav #project,
+header nav #contact {
+    display: none;
   }
 }
 @media screen and (min-width: 576px) {

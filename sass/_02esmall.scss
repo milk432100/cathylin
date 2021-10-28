@@ -1,4 +1,14 @@
-#main {
-    width: 50px;
-    background-color: azure;
+// scss 巢狀語法：呼叫元素選擇器(標籤選擇器)
+// 轉譯後為 後代選擇器 header nav #portofolio {...}
+header {
+    nav {
+        // 導覽列：只顯示Logo 和 Menu，其餘不顯示
+        // 集合寫法，將共同的樣式一同編輯
+        #portofolio,
+        #about,
+        #project,
+        #contact {
+            display: none;
+        }
+    }
 }
