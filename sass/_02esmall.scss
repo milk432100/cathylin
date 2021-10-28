@@ -1,19 +1,22 @@
 // scss 巢狀語法：呼叫元素選擇器(標籤選擇器)
 // 轉譯後為 後代選擇器 header nav #portofolio {...}
+// scss 繼承
+
+// 繼承區
+.Dn {
+    // 不顯示
+    display: none;
+}
+
 header {
     nav {
         // 導覽列：只顯示Logo 和 Menu，其餘不顯示
-        #portofolio {
-            display: none;
-        }
-        #about {
-            display: none;
-        }
-        #project {
-            display: none;
-        }
+        // 集合寫法，將共同的樣式一同編輯
+        #portofolio,
+        #about,
+        #project,
         #contact {
-            display: none;
+            @extend .Dn;
         }
     }
 }

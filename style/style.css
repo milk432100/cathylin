@@ -18,16 +18,10 @@ header {
 }
 
 @media screen and (max-width: 576px) {
-  header nav #portofolio {
-    display: none;
-  }
-  header nav #about {
-    display: none;
-  }
-  header nav #project {
-    display: none;
-  }
-  header nav #contact {
+  .Dn, header nav #portofolio,
+header nav #about,
+header nav #project,
+header nav #contact {
     display: none;
   }
 }
