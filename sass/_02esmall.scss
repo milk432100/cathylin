@@ -2,8 +2,8 @@
 // 轉譯後為 後代選擇器 header nav #portofolio {...}
 // scss 繼承
 
-// 繼承區
-.Dn {
+// 繼承區  % 變數
+%Dn {
     // 不顯示
     display: none;
 }
@@ -16,7 +16,7 @@ header {
         #about,
         #project,
         #contact {
-            @extend .Dn;
+            @extend %Dn;
         }
     }
 }
