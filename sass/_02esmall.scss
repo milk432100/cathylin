@@ -3,10 +3,15 @@
 header {
     nav {
         // 導覽列：只顯示Logo 和 Menu，其餘不顯示
-        // 集合寫法，將共同的樣式一同編輯
-        #portofolio,
-        #about,
-        #project,
+        #portofolio {
+            display: none;
+        }
+        #about {
+            display: none;
+        }
+        #project {
+            display: none;
+        }
         #contact {
             display: none;
         }
