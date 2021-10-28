@@ -20,3 +20,9 @@ header {
         }
     }
 }
+
+footer [
+    nav {
+        @extend %Dn;
+    }
+]
