@@ -21,8 +21,8 @@ header {
     }
 }
 
-footer [
+footer {
     nav {
         @extend %Dn;
     }
-]
+}
