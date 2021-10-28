@@ -7,6 +7,11 @@
     // 不顯示
     display: none;
 }
+%subnav {
+    //頁尾次選單 寬度 與 文字顏色
+    width: 50%;
+    color: aliceblue;
+}
 
 header {
     nav {
@@ -23,6 +28,17 @@ header {
 
 footer {
     nav {
-        @extend %Dn;
+        #graphic {
+            @extend %subnav;
+            background-color: rgb(255, 196, 0);
+        }
+        #audio {
+            @extend %subnav;
+            background-color: rgb(180, 240, 61);
+        }
+        #web {
+            @extend %subnav;
+            background-color: rgb(76, 186, 219);
+        }
     }
 }

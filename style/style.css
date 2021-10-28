@@ -18,11 +18,26 @@ header {
 }
 
 @media screen and (max-width: 576px) {
-  footer nav, header nav #portofolio,
+  header nav #portofolio,
 header nav #about,
 header nav #project,
 header nav #contact {
     display: none;
+  }
+
+  footer nav #web, footer nav #audio, footer nav #graphic {
+    width: 50%;
+    color: aliceblue;
+  }
+
+  footer nav #graphic {
+    background-color: #ffc400;
+  }
+  footer nav #audio {
+    background-color: #b4f03d;
+  }
+  footer nav #web {
+    background-color: #4cbadb;
   }
 }
 @media screen and (min-width: 576px) {
