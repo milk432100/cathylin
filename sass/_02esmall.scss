@@ -2,6 +2,10 @@
 // 轉譯後為 後代選擇器 header nav #portofolio {...}
 // scss 繼承
 
+// 變數區
+$NW: 100%; // 導覽列的寬度
+$NH: 80px; // 導覽列的高度 最小60
+
 // 繼承區  % 變數
 %Dn {
     // 不顯示
@@ -15,6 +19,11 @@
 
 header {
     nav {
+        // 屬於 nav 寬度 % ;高度 px ;背景色(暫時)
+        width: $NW;
+        height: $NH;
+        background-color: yellow;
+
         // 導覽列：只顯示Logo 和 Menu，其餘不顯示
         // 集合寫法，將共同的樣式一同編輯
         #portofolio,
