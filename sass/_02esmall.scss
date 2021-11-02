@@ -30,12 +30,12 @@ header {
         // 商標
         #logo {
             // 寬度 8等份
-            width: $W8;
+            width: $W8 + 5%;
         }
         // 選單
         #menu {
             // 寬度 2等份
-            width: $W2;
+            width: $W1 + 5%;
         }
 
         .clear {
@@ -44,7 +44,7 @@ header {
 
         // 導覽列：只顯示Logo 和 Menu，其餘不顯示
         // 集合寫法，將共同的樣式一同編輯
-        #portofolio,
+        #portfolio,
         #about,
         #project,
         #contact {
