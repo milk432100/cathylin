@@ -6,4 +6,11 @@
     margin: 0 auto;
     // 物件與物件邊界為 0
     padding: 0;
+
+    // 隱藏項目符號
+    list-style-type: none;
 }
+
+// 變數區
+$NW: 100%; // 導覽列的寬度
+$NH: 65px; // 導覽列的高度 最小60

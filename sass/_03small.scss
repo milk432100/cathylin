@@ -1,4 +1,17 @@
-#main {
-    width: 70px;
-    background-color: orchid;
+header {
+    nav {
+        // 屬於 nav 寬度 % ;高度 px ;背景色(暫時)
+        width: $NW;
+        height: $NH;
+        background-color: yellow;
+
+        // 導覽列：只顯示Logo 和 Menu，其餘不顯示
+        // 集合寫法，將共同的樣式一同編輯
+        #portofolio,
+        #about,
+        #project,
+        #contact {
+            //@extend %Dn;
+        }
+    }
 }

@@ -2,10 +2,6 @@
 // 轉譯後為 後代選擇器 header nav #portofolio {...}
 // scss 繼承
 
-// 變數區
-$NW: 100%; // 導覽列的寬度
-$NH: 80px; // 導覽列的高度 最小60
-
 // 繼承區  % 變數
 %Dn {
     // 不顯示
@@ -23,6 +19,13 @@ header {
         width: $NW;
         height: $NH;
         background-color: yellow;
+
+        // 指向清單物件 li
+        li {
+            // 將 Logo 與 選單 設定為 垂直排列(一列) float
+            // float (浮點對齊) 缺點，會自動往上一階層(新圖層)， 所以，父框架(外框架)，若沒有設定高度，系統將會無視存在
+            float: left;
+        }
 
         // 導覽列：只顯示Logo 和 Menu，其餘不顯示
         // 集合寫法，將共同的樣式一同編輯
