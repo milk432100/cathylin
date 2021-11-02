@@ -44,7 +44,9 @@ header nav #contact {
     float: left;
   }
   header nav #logo {
-    width: 645%;
+    width: 85%;
+    font-size: 32px;
+    font-family: Arial, Helvetica, sans-serif;
   }
   header nav #menu {
     width: 15%;
