@@ -54,8 +54,11 @@ header nav #contact {
   }
   header nav #menu {
     width: 15%;
+    height: 80px;
     text-align: center;
     line-height: 80px;
+    background-image: url(../../imgs/icon/000002.svg);
+    background-color: blanchedalmond;
   }
   header nav .clear {
     clear: both;

@@ -45,9 +45,12 @@ header {
         #menu {
             // 寬度 1.5等份
             width: $W1 + 5%;
+            height: 80px;
             // 文字水平(行距)、垂直(文字對齊 ---置中)置中
             text-align: center;
             line-height: 80px;
+            background-image: url(../../imgs/icon/000002.svg);
+            background-color: blanchedalmond;
         }
 
         .clear {
