@@ -17,7 +17,7 @@ header {
     nav {
         // 屬於 nav 寬度 % ;高度 px ;背景色(暫時)
         width: $NW;
-        // height: 80px;
+        height: 80px;
         background-color: yellow;
 
         // 指向清單物件 li
@@ -45,10 +45,9 @@ header {
         #menu {
             // 寬度 1.5等份
             width: $W1 + 5%;
-            img {
-                width: 80px;
-                background-color: rgb(245, 243, 158);
-            }
+            // 文字水平(行距)、垂直(文字對齊 ---置中)置中
+            text-align: center;
+            line-height: 80px;
         }
 
         .clear {
