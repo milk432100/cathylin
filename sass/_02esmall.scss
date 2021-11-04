@@ -17,7 +17,7 @@ header {
     nav {
         // 屬於 nav 寬度 % ;高度 px ;背景色(暫時)
         width: $NW;
-        //height: $NH;
+        // height: 80px;
         background-color: yellow;
 
         // 指向清單物件 li
@@ -34,11 +34,19 @@ header {
             // 文字尺寸，內縮，水平置中
             font-size: $Tpx * 2;
             font-family: Arial, Helvetica, sans-serif;
+            // 內縮：方法1，首行縮排(單行文字)
+            text-indent: 30px;
+            // 文字水平置中，行距設定(父框架的高度 = 行距的數值)  line-height: 80* 0.15 + px;
+            // 方法1 父框架有高度時，父框架的高度 = 行距的數值；方法2 文字尺寸倍數 +3 = 行距
+            line-height: $Tpx * (2 + 3);
         }
         // 選單
         #menu {
             // 寬度 2等份
             width: $W1 + 5%;
+            img {
+                background-color: rgb(245, 243, 158);
+            }
         }
 
         .clear {

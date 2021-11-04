@@ -47,9 +47,14 @@ header nav #contact {
     width: 85%;
     font-size: 32px;
     font-family: Arial, Helvetica, sans-serif;
+    text-indent: 30px;
+    line-height: 80px;
   }
   header nav #menu {
     width: 15%;
+  }
+  header nav #menu img {
+    background-color: #f5f39e;
   }
   header nav .clear {
     clear: both;
