@@ -49,8 +49,17 @@ header {
             // 文字水平(行距)、垂直(文字對齊 ---置中)置中
             text-align: center;
             line-height: 80px;
+            // 將文字移至裝置之外
+            text-indent: -99999px;
+            // 背景圖片連結
             background-image: url(../../imgs/icon/000002.svg);
-            background-color: blanchedalmond;
+            // 背景圖片對齊(定位點)
+            background-position: center;
+            // 背景圖片取消重複顯示
+            background-repeat: no-repeat;
+            // 背景圖片尺寸 auto 自動 cover 符合框架尺寸
+            background-size: cover;
+            // background-color: blanchedalmond;
         }
 
         .clear {
