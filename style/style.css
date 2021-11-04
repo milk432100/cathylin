@@ -49,11 +49,13 @@ header nav #contact {
     font-family: Arial, Helvetica, sans-serif;
     text-indent: 30px;
     line-height: 80px;
+    background-color: bisque;
   }
   header nav #menu {
     width: 15%;
   }
   header nav #menu img {
+    width: 80px;
     background-color: #f5f39e;
   }
   header nav .clear {
