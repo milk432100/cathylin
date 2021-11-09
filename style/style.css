@@ -38,7 +38,6 @@ header nav #contact {
 
   header nav {
     width: 100%;
-    height: 70px;
     background-color: yellow;
   }
   header nav li {
@@ -46,16 +45,17 @@ header nav #contact {
   }
   header nav #logo {
     width: 85%;
-    font-size: 32px;
+    font-size: 2rem;
     font-family: Arial, Helvetica, sans-serif;
     text-indent: 30px;
+    line-height: 5rem;
     background-color: bisque;
   }
   header nav #menu {
     width: 15%;
     height: 80px;
     text-align: center;
-    line-height: 70px;
+    line-height: 7vh;
     text-indent: -99999px;
     background-image: url(../../imgs/icon/000002.svg);
     background-position: center;
