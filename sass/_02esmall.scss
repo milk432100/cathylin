@@ -75,10 +75,32 @@ header {
         }
     }
 
-    // 輪播圖片 超小與小裝置 100% 寬 * 375px 高
+    // 輪播圖片 超小與小裝置 100% 寬 * 280px 高
     #BannerBox {
         width: $W10;
-        height: 280px;
+        height: $BHsmall;
+        background-color: antiquewhite;
+        ul {
+            li {
+                width: $W10;
+                height: $BHsmall;
+            }
+            .box1 {
+                background-color: rgb(231, 163, 201);
+            }
+            .box2 {
+                background-color: rgb(243, 195, 123);
+            }
+            .box3 {
+                background-color: rgb(243, 255, 136);
+            }
+            .box4 {
+                background-color: rgb(130, 255, 136);
+            }
+            .box5 {
+                background-color: rgb(124, 250, 250);
+            }
+        }
     }
 }
 
