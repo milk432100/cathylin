@@ -65,6 +65,11 @@ header nav #contact {
   header nav .clear {
     clear: both;
   }
+  header #BannerBox {
+    width: 100%;
+    height: 280px;
+  }
+
   footer nav #graphic {
     background-color: #ffc400;
   }

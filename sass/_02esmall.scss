@@ -74,6 +74,12 @@ header {
             @extend %Dn;
         }
     }
+
+    // 輪播圖片 超小與小裝置 100% 寬 * 375px 高
+    #BannerBox {
+        width: $W10;
+        height: 280px;
+    }
 }
 
 footer {
