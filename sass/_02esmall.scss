@@ -75,15 +75,18 @@ header {
         }
     }
 
-    // 輪播圖片 超小與小裝置 100% 寬 * 280px 高
+    // 輪播圖片 超小與小裝置 100% 寬 * 280px 高 (圖片以大尺寸 1920*600 為基礎計算)
     #BannerBox {
         width: $W10;
         height: $BHsmall;
         background-color: antiquewhite;
         ul {
+            width: $W10 * 5;
+            height: $BHsmall;
             li {
                 width: $W10;
                 height: $BHsmall;
+                float: left;
             }
             .box1 {
                 background-color: rgb(231, 163, 201);

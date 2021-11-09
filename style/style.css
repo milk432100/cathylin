@@ -70,9 +70,14 @@ header nav #contact {
     height: 280px;
     background-color: antiquewhite;
   }
+  header #BannerBox ul {
+    width: 500%;
+    height: 280px;
+  }
   header #BannerBox ul li {
     width: 100%;
     height: 280px;
+    float: left;
   }
   header #BannerBox ul .box1 {
     background-color: #e7a3c9;
