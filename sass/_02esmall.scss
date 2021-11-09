@@ -15,9 +15,11 @@
 
 header {
     nav {
+        // 設定 nav 專用 (區域) 變數
+        $NH: 70px;
         // 屬於 nav 寬度 % ;高度 px ;背景色(暫時)
         width: $NW;
-        height: 80px;
+        height: $NH;
         background-color: yellow;
 
         // 指向清單物件 li
@@ -38,7 +40,7 @@ header {
             text-indent: 30px;
             // 文字水平置中，行距設定(父框架的高度 = 行距的數值)  line-height: 80* 0.15 + px;
             // 方法1 父框架有高度時，父框架的高度 = 行距的數值；方法2 文字尺寸倍數 +3 = 行距
-            line-height: $Tpx * (2 + 3);
+            // line-height: $Tpx * (2 + 3);
             background-color: bisque;
         }
         // 選單
@@ -48,7 +50,7 @@ header {
             height: 80px;
             // 文字水平(行距)、垂直(文字對齊 ---置中)置中
             text-align: center;
-            line-height: 80px;
+            line-height: $NH;
             // 將文字移至裝置之外
             text-indent: -99999px;
             // 背景圖片連結
@@ -57,7 +59,7 @@ header {
             background-position: center;
             // 背景圖片取消重複顯示
             background-repeat: no-repeat;
-            // 背景圖片尺寸 auto 自動 cover 符合框架尺寸 contain 置中
+            // 背景圖片尺寸 auto 自動 cover (背景圖片小於容器時，放大圖片至容器的大小並填滿;背景圖片大於容器時，所小圖片至容器的大小並填滿;缺點，容器的長寬比例與背景圖片的長寬比例不合時，會出現背景圖片失真) contain (背景圖片大於容器時，縮小至在容器內呈現，會留邊界)
             background-size: contain;
             // background-color: blanchedalmond;
         }
