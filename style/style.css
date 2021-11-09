@@ -61,7 +61,7 @@ header nav #contact {
     background-image: url(../../imgs/icon/000002.svg);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
   }
   header nav .clear {
     clear: both;

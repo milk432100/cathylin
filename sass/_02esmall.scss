@@ -57,8 +57,8 @@ header {
             background-position: center;
             // 背景圖片取消重複顯示
             background-repeat: no-repeat;
-            // 背景圖片尺寸 auto 自動 cover 符合框架尺寸
-            background-size: cover;
+            // 背景圖片尺寸 auto 自動 cover 符合框架尺寸 contain 置中
+            background-size: contain;
             // background-color: blanchedalmond;
         }
 
