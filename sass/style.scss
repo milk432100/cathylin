@@ -22,9 +22,9 @@ header {
 }
 
 // 小裝置 >= 576px　min-width (最小寬度 含等於) small
-@media screen and (min-width: 576px) {
-    @import "_03small.scss";
-}
+// @media screen and (min-width: 576px) {
+//     @import "_03small.scss";
+// }
 
 // 平板裝置 >= 768px medium
 @media screen and (min-width: 768px) {

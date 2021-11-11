@@ -37,7 +37,7 @@ header {
             // 文字水平(行距)、垂直(文字對齊 ---置中)置中
             text-align: center;
             line-height: $NH;
-            @include BgText;
+            @include BgText(contain);
             // 背景圖片連結
             background-image: url(../../imgs/icon/000002.svg);
         }
