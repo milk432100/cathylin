@@ -49,3 +49,15 @@ $W9: $W10 / 10 * 9; // 寬度 9等份
 @mixin Dn {
     display: none;
 }
+
+// 背景圖片替代文字
+@mixin BgText {
+    // 將文字移至裝置之外
+    text-indent: -99999px;
+    // 背景圖片對齊(定位點)
+    background-position: center;
+    // 背景圖片取消重複顯示
+    background-repeat: no-repeat;
+    // 背景圖片尺寸 auto 自動 cover (背景圖片小於容器時，放大圖片至容器的大小並填滿;背景圖片大於容器時，所小圖片至容器的大小並填滿;缺點，容器的長寬比例與背景圖片的長寬比例不合時，會出現背景圖片失真) contain (背景圖片大於容器時，縮小至在容器內呈現，會留邊界)
+    background-size: contain;
+}
