@@ -24,18 +24,6 @@ header {
 }
 
 @media screen and (max-width: 576px) {
-  header nav #portfolio,
-header nav #about,
-header nav #project,
-header nav #contact {
-    display: none;
-  }
-
-  footer nav #web, footer nav #audio, footer nav #graphic {
-    width: 50%;
-    color: aliceblue;
-  }
-
   header nav {
     width: 100%;
     height: 65px;
@@ -65,44 +53,25 @@ header nav #contact {
   header nav .clear {
     clear: both;
   }
+  header nav #portfolio,
+header nav #about,
+header nav #project,
+header nav #contact {
+    display: none;
+  }
   header #BannerBox {
     width: 100%;
     height: 280px;
+    overflow-x: auto;
     background-color: antiquewhite;
   }
   header #BannerBox ul {
     width: 500%;
-    height: 280px;
   }
   header #BannerBox ul li {
-    width: 100%;
+    width: 100vw;
     height: 280px;
     float: left;
-  }
-  header #BannerBox ul .box1 {
-    background-color: #e7a3c9;
-  }
-  header #BannerBox ul .box2 {
-    background-color: #f3c37b;
-  }
-  header #BannerBox ul .box3 {
-    background-color: #f3ff88;
-  }
-  header #BannerBox ul .box4 {
-    background-color: #82ff88;
-  }
-  header #BannerBox ul .box5 {
-    background-color: #7cfafa;
-  }
-
-  footer nav #graphic {
-    background-color: #ffc400;
-  }
-  footer nav #audio {
-    background-color: #b4f03d;
-  }
-  footer nav #web {
-    background-color: #4cbadb;
   }
 }
 @media screen and (min-width: 576px) {
