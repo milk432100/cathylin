@@ -1,4 +1,78 @@
-#main {
-    width: 120px;
-    background-color: palevioletred;
+header {
+    nav {
+        // 屬於 nav 寬度 % ;高度 px ;背景色(暫時)
+        width: $NW;
+        height: $NH;
+        background-color: yellow;
+
+        // 指向清單物件 li
+        li {
+            // 將 Logo 與 選單 設定為 垂直排列(一列) float
+            // float (浮點對齊) 缺點，會自動往上一階層(新圖層)， 所以，父框架(外框架)，若沒有設定高度，系統將會無視存在
+            // 解決方式一:父框架(外框架)設定高度 ; 解決方式二:清除 clear 浮動狀態
+            float: left;
+        }
+        // 商標
+        #logo {
+            // 寬度 8.5等份
+            width: $W8 + 5%;
+            // 文字尺寸，內縮，水平置中
+            font-size: $Tpx * 2;
+            font-family: Arial, Helvetica, sans-serif;
+            // 內縮：方法1，首行縮排(單行文字)
+            text-indent: 30px;
+            // 文字水平置中，行距設定(父框架的高度 = 行距的數值)  line-height: 80* 0.15 + px;
+            line-height: $NH;
+            background-color: bisque;
+        }
+        // 選單
+        #menu {
+            // 寬度 1.5等份
+            width: $W1 + 5%;
+            // height: 80px;
+            // 文字水平(行距)、垂直(文字對齊 ---置中)置中
+            text-align: center;
+            line-height: $NH;
+            @include BgText(contain);
+            // 背景圖片連結
+            background-image: url(../../imgs/icon/000002.svg);
+        }
+
+        .clear {
+            clear: both;
+        }
+
+        // 導覽列：只顯示Logo 和 Menu，其餘不顯示
+        // 集合寫法，將共同的樣式一同編輯
+        #portfolio,
+        #about,
+        #project,
+        #contact {
+            // @extend %Dn;
+            // 呼叫 @mixin
+            @include Dn;
+        }
+    }
+
+    // 輪播圖片 超小與小裝置 100% 寬 * 280px 高 (圖片以大尺寸 1920*600 為基礎計算)
+    // vw(以裝置的寬為寬度) vh(以裝置的高為高度)
+    #BannerBox {
+        width: $W10;
+        height: $BHsmall;
+        // 超出範圍設定，能滑動x軸，讓圖片在框架中左右滑動
+        overflow-x: auto;
+        background-color: antiquewhite;
+        ul {
+            // 圖片框的寬度尺寸
+            width: $W10 * 5;
+            li {
+                width: 100vw;
+                height: $BHsmall;
+                float: left;
+            }
+        }
+    }
+}
+
+footer {
 }
