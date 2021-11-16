@@ -4,10 +4,21 @@ header {
         width: $NW;
         background-color: yellow;
 
-        // 彈性佈局
+        // 顯示方式：彈性佈局 要排列物的父框架
+        display: flex;
 
         // 商標
         #logo {
+            // 寬度
+            width: $W1 * 3;
+            // 商標水平置中
+            text-align: center;
+            // 文字尺寸
+            font-size: $Em * 2.5;
+            font-family: Arial, Helvetica, sans-serif;
+            // 清除小裝置設定 首行縮排
+            text-indent: 0;
+            background-color: antiquewhite;
         }
 
         #portfolio,
@@ -17,25 +28,6 @@ header {
             // 小裝置為關閉，需再次開啟才可以看到資料
             // 呼叫 @mixin
             @include On;
-        }
-    }
-
-    // 輪播圖片 超小與小裝置 100% 寬 * 280px 高 (圖片以大尺寸 1920*600 為基礎計算)
-    // vw(以裝置的寬為寬度) vh(以裝置的高為高度)
-    #BannerBox {
-        width: $W10;
-        height: $BHsmall;
-        // 超出範圍設定，能滑動x軸，讓圖片在框架中左右滑動
-        overflow-x: auto;
-        background-color: antiquewhite;
-        ul {
-            // 圖片框的寬度尺寸
-            width: $W10 * 5;
-            li {
-                width: 100vw;
-                height: $BHsmall;
-                float: left;
-            }
         }
     }
 }
