@@ -61,6 +61,11 @@ $W9: $W10 / 10 * 9; // 寬度 9等份
     display: none;
 }
 
+@mixin On {
+    // 顯示方式：區塊
+    display: block;
+}
+
 // 背景圖片替代文字
 @mixin BgText($Bs) {
     // 將文字移至裝置之外

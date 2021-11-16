@@ -2,6 +2,17 @@
 /* ctrl+/ 開啟註解 */
 /* 樣式 */
 /* 對應 HTML5相同標籤或者呼叫 id(標籤 自訂 名稱-英文、數字、底線_、唯一) ；class (可重複，共用樣式)*/
+/*
+網頁使用的單位
+寬度 高度 行距 文字 物件的距離 (外間距與內間距)，只要計算的值，都有單位
+基礎單位 像素(px)
+響應式網頁的單位 百分比(%) vw與vh(裝置可視寬度與高度，新單位)
+
+1.百分比(%)的缺點：高度無法顯示
+2.vw與vh：舊瀏覽器(IE)不支援；mac瀏覽器(Safari)，因為手機版需要扣除瀏覽器自帶的功能按鈕(在畫面之下方)。
+
+行距 文字，百分比的單位 em (子物件的設定值會疊加父物件的設定值) 和 rem (不受父物件設定值影響)
+*/
 * {
   margin: 0 auto;
   padding: 0;
@@ -74,11 +85,62 @@ header nav #contact {
     float: left;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 576px) {
   header nav {
     width: 100%;
     height: 65px;
     background-color: yellow;
+  }
+  header nav li {
+    float: left;
+  }
+  header nav #logo {
+    width: 90%;
+    font-size: 32px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-indent: 30px;
+    line-height: 65px;
+    background-color: bisque;
+  }
+  header nav #menu {
+    width: 10%;
+    text-align: center;
+    line-height: 65px;
+    text-indent: -99999px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url(../../imgs/icon/000002.svg);
+  }
+  header nav .clear {
+    clear: both;
+  }
+  header nav #portfolio,
+header nav #about,
+header nav #project,
+header nav #contact {
+    display: none;
+  }
+  header #BannerBox {
+    width: 100%;
+    height: 280px;
+    overflow-x: auto;
+    background-color: antiquewhite;
+  }
+  header #BannerBox ul {
+    width: 500%;
+  }
+  header #BannerBox ul li {
+    width: 100vw;
+    height: 280px;
+    float: left;
+  }
+}
+@media screen and (min-width: 768px) {
+  header nav {
+    width: 100%;
+    height: 65px;
+    background-color: rgba(245, 245, 91, 0.925);
   }
   header nav li {
     float: left;
@@ -159,7 +221,7 @@ header nav #contact {
 header nav #about,
 header nav #project,
 header nav #contact {
-    display: none;
+    display: block;
   }
   header #BannerBox {
     width: 100%;

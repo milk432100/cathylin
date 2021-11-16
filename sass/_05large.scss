@@ -48,9 +48,9 @@ header {
         #about,
         #project,
         #contact {
-            // @extend %Dn;
+            // 小裝置為關閉，需再次開啟才可以看到資料
             // 呼叫 @mixin
-            @include Dn;
+            @include On;
         }
     }
 
