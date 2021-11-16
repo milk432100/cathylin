@@ -191,11 +191,21 @@ header nav #contact {
   }
   header nav #logo {
     width: 30%;
+  }
+  header nav li {
+    width: 17.5%;
+  }
+  header nav #logo {
     text-align: center;
-    font-size: 2.5em;
+    font-size: 2rem;
     font-family: Arial, Helvetica, sans-serif;
     text-indent: 0;
     background-color: antiquewhite;
+  }
+  header nav li {
+    text-align: center;
+    font-size: 1.3rem;
+    line-height: 68.8px;
   }
   header nav #portfolio,
 header nav #about,
