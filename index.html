@@ -20,16 +20,39 @@
                 <!-- 連結 a 商標連結首頁-->
                 <a href="index.html">迎峯飄揚</a>
             </li>
-            <li id="portfolio">作品分享</li>
-            <li id="about">關於峯瑩</li>
-            <li id="project">專案項目</li>
-            <li id="contact">聯絡表單</li>
+            <li id="portfolio">
+                <a href="#portfoliobox">作品分享</a>
+            </li>
+            <li id="about">
+                <a href="#aboutbox">關於峯瑩</a>
+            </li>
+            <li id="project">
+                <a href="#projectbox">專案項目</a>
+            </li>
+            <li id="contact">
+                <a href="#contactbox">聯絡表單</a>
+            </li>
             <!-- 將圖片置入 li 標籤之中 src 連結位置 alt 取代文字 title 視障朋友用的 滑鼠放上的圖片說明文-->
             <li id="menu">
                 <!-- 將圖片改為文字輸出，樣式設定還是顯示圖：符和 SEO用法：因為圖片可以水平置中，但無法垂直置中 -->
                 工作室選單按鈕
                 <!-- <img src="imgs\icon\000002.svg" alt="選單" title="選單按鈕"> -->
             </li>
+            <!-- 手機版的導覽列 -->
+            <ul id="mobilenav">
+                <li id="mobileportfolio">
+                    <a href="#portfoliobox">作品分享</a>
+                </li>
+                <li id="mobileabout">
+                    <a href="#aboutbox">關於峯瑩</a>
+                </li>
+                <li id="mobileproject">
+                    <a href="#projectbox">專案項目</a>
+                </li>
+                <li id="mobilecontact">
+                    <a href="#contactbox">聯絡表單</a>
+                </li>
+            </ul>
             <!-- p 段落 -->
             <p class="clear"></p>
         </nav>
@@ -62,16 +85,16 @@
     方法二：文章標籤(atticle)：若有多個相同標籤，請用 ID 選擇器(唯一 javascript相關) 或是 類別選擇器 (class) (大家相關) 區分 -->
     <article id="main">
         <article>
-            <h1>作品分享</h1>
+            <h1 id="portfoliobox">作品分享</h1>
         </article>
         <article>
-            <h1>關於峯瑩</h1>
+            <h1 id="aboutbox">關於峯瑩</h1>
         </article>
         <article>
-            <h1>專案項目</h1>
+            <h1 id="projectbox">專案項目</h1>
         </article>
         <article>
-            <h1>聯絡表單</h1>
+            <h1 id="contactbox">聯絡表單</h1>
         </article>
     </article>
 
