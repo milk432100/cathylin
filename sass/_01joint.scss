@@ -80,12 +80,22 @@ $W9: $W10 / 10 * 9; // 寬度 9等份
 }
 
 // 設定 05 06 07 檔案共用的寬度，導覽列的按鈕，所以會在nav
-@mixin LargeNav {
+@mixin LargeNav($multiple, $BtnNum) {
+    // 計算方式
+    // 設定 寬度的基準值 5%
+    $W05: 5%;
+    // 設定 代表 logo 寬度的變數 30% ：寬度的倍數 6 multiple
+    $LogoWidth: $W05 * multiple;
+
+    //設定 代表 li寬度的變數 ；(總寬度 - Logo寬度) / 剩餘的按鈕數 BtnNum 4 70% / 4 = 17.5%
+    $liWidth: ($W10 - $LogoWidth) / $BtnNum;
+
+    // 樣式表
     #logo {
         // 寬度
-        width: $W1 * 3;
+        width: $LogoWidth;
     }
     li {
-        width: ($W10 - 30%) / 4;
+        width: $liWidth;
     }
 }
