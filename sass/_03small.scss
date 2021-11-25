@@ -56,6 +56,18 @@ header {
         }
     }
 
+    // 手機版的導覽列
+    #mobilenav {
+        width: $W1 * 10;
+        // 高度單位 vh (裝置的可是高度)
+        height: 100vh;
+        // 定位點 絕對定位 設定階層
+        position: absolute;
+        z-index: 5;
+        display: none;
+        background-color: rgb(245, 196, 187);
+    }
+
     // 輪播圖片 超小與小裝置 100% 寬 * 280px 高 (圖片以大尺寸 1920*600 為基礎計算)
     // vw(以裝置的寬為寬度) vh(以裝置的高為高度)
     #BannerBox {

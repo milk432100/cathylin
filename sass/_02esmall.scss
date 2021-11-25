@@ -6,7 +6,8 @@ header {
     nav {
         // 屬於 nav 寬度 % ;高度 px ;背景色(暫時)
         width: $NW;
-        height: $NH;
+        // 設定手機版的導覽列 62行，定位點語法與階層語法，被 nav 的高設定給抵消，所以才隱藏 nav 的高度
+        // height: $NH;
         background-color: yellow;
 
         // 指向清單物件 li
@@ -27,7 +28,7 @@ header {
             text-indent: 30px;
             // 文字水平置中，行距設定(父框架的高度 = 行距的數值)  line-height: 80* 0.15 + px;
             line-height: $NH;
-            background-color: bisque;
+            // background-color: bisque;
         }
         // 選單
         #menu {
@@ -40,14 +41,6 @@ header {
             @include BgText(contain);
             // 背景圖片連結
             background-image: url(../../imgs/icon/000002.svg);
-        }
-
-        // 手機版的導覽列
-        #mobilenav {
-            width: $W1 * 10;
-            // 高度單位 vh (裝置的可是高度)
-            height: 100vh;
-            background-color: rgb(245, 196, 187);
         }
 
         // .clear {
@@ -64,6 +57,17 @@ header {
             // 呼叫 @mixin
             @include Dn;
         }
+    }
+    // 手機版的導覽列
+    #mobilenav {
+        width: $W1 * 10;
+        // 高度單位 vh (裝置的可是高度)
+        height: 100vh;
+        // 定位點 絕對定位 設定階層
+        position: absolute;
+        z-index: 5;
+        display: none;
+        background-color: rgb(245, 196, 187);
     }
 
     // 輪播圖片 超小與小裝置 100% 寬 * 280px 高 (圖片以大尺寸 1920*600 為基礎計算)
