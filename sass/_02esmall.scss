@@ -8,7 +8,7 @@ header {
         width: $NW;
         // 設定手機版的導覽列 62行，定位點語法與階層語法，被 nav 的高設定給抵消，所以才隱藏 nav 的高度
         // height: $NH;
-        background-color: yellow;
+        background-color: rgb(255, 236, 196);
 
         // 指向清單物件 li
         li {
@@ -25,10 +25,12 @@ header {
             font-size: $Tpx * 2;
             font-family: Arial, Helvetica, sans-serif;
             // 內縮：方法1，首行縮排(單行文字)
-            text-indent: 30px;
+            text-indent: 20px;
             // 文字水平置中，行距設定(父框架的高度 = 行距的數值)  line-height: 80* 0.15 + px;
             line-height: $NH;
             // background-color: bisque;
+            //對齊方式 置中
+            // text-align: center;
         }
         // 選單
         #menu {
@@ -67,7 +69,7 @@ header {
         position: absolute;
         z-index: 5;
         display: none;
-        background-color: rgb(245, 196, 187);
+        background-color: rgba(255, 238, 163, 0.897);
     }
 
     // 輪播圖片 超小與小裝置 100% 寬 * 280px 高 (圖片以大尺寸 1920*600 為基礎計算)
@@ -106,4 +108,53 @@ header {
 }
 
 footer {
+    .HRLine {
+        // 上邊界與下邊界，讓 main 與 footer 有點區隔
+        margin: {
+            top: 15px;
+            bottom: 15px;
+        }
+    }
+    nav {
+        width: $W1 * 8;
+        // 彈性佈局 設定方式：設定在要排列物件的父框架
+        display: flex;
+    }
+    // 彈性佈局 order 重新設定排列順序
+    #audio {
+        order: 1;
+    }
+    .leftline {
+        order: 2;
+    }
+    #graphic {
+        order: 3;
+    }
+    .rightline {
+        order: 4;
+    }
+    #web {
+        order: 5;
+    }
+}
+
+address {
+    width: $W1 * 4;
+    // 彈性佈局
+    display: flex;
+    // 上邊界 nav 與 address 的距離
+    margin: {
+        top: 10px;
+        bottom: 20px;
+    }
+}
+
+h6 {
+    // 文字置中
+    text-align: center;
+    // 文字尺寸
+    font-size: $Trem * 0.85;
+    // 文字粗細
+    font-weight: 700;
+    background-color: rgb(250, 235, 167);
 }

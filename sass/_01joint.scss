@@ -28,6 +28,22 @@ img {
     height: auto;
 }
 
+.clear {
+    clear: both;
+}
+
+a {
+    // 隱藏連結樣式底線
+    text-decoration: none;
+    // 文字顏色
+    color: black;
+}
+a:hover {
+    // 觸碰後文字顏色
+    color: palevioletred;
+    // 文字加粗
+    font-weight: 500;
+}
 // 變數區
 $W10: 100%;
 $Tpx: 16px; // 設定文字尺寸的基礎值 單位 16px (固定值)
