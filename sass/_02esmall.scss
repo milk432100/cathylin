@@ -139,13 +139,18 @@ footer {
 }
 
 address {
-    width: $W1 * 4;
+    width: $W1 * 5;
     // 彈性佈局
     display: flex;
     // 上邊界 nav 與 address 的距離
     margin: {
         top: 10px;
         bottom: 20px;
+    }
+    .line {
+        width: $w1 * 2;
+        height: 30px;
+        @include BG(icon, "line.svg", contain);
     }
 }
 
