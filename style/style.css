@@ -138,12 +138,21 @@ header nav #contact {
   }
 
   address {
-    width: 40%;
+    width: 50%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     margin-top: 10px;
     margin-bottom: 20px;
+  }
+  address .line {
+    width: 20%;
+    height: 30px;
+    background-image: url(../../imgs/icon/line.svg);
+    text-indent: -99999px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
   }
 
   h6 {
@@ -203,6 +212,67 @@ header nav #contact {
   header #BannerBox ul li {
     width: 100vw;
     float: left;
+  }
+
+  footer .HRLine {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  footer nav {
+    width: 80%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  footer #audio {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  footer .leftline {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  footer #graphic {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+  footer .rightline {
+    -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+            order: 4;
+  }
+  footer #web {
+    -webkit-box-ordinal-group: 6;
+        -ms-flex-order: 5;
+            order: 5;
+  }
+
+  address {
+    width: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  address .line {
+    width: 20%;
+    height: 30px;
+    background-image: url(../../imgs/icon/line.svg);
+    text-indent: -99999px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  h6 {
+    text-align: center;
+    font-size: 0.85rem;
+    font-weight: 700;
+    background-color: #faeba7;
   }
 }
 @media screen and (min-width: 768px) {
@@ -287,6 +357,67 @@ header nav #contact {
     border-bottom-width: 2px;
     border-bottom-style: solid;
     border-bottom-color: tomato;
+  }
+
+  footer .HRLine {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  footer nav {
+    width: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  footer #audio {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  footer .leftline {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  footer #graphic {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+  footer .rightline {
+    -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+            order: 4;
+  }
+  footer #web {
+    -webkit-box-ordinal-group: 6;
+        -ms-flex-order: 5;
+            order: 5;
+  }
+
+  address {
+    width: 25%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  address .line {
+    width: 20%;
+    height: 30px;
+    background-image: url(../../imgs/icon/line.svg);
+    text-indent: -99999px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  h6 {
+    text-align: center;
+    font-size: 0.85rem;
+    font-weight: 700;
+    background-color: #faeba7;
   }
 }
 @media screen and (min-wudth: 1200px) {

@@ -148,7 +148,7 @@ address {
         bottom: 20px;
     }
     .line {
-        width: $w1 * 2;
+        width: $W1 * 2;
         height: 30px;
         @include BG(icon, "line.svg", contain);
     }

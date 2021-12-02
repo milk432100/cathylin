@@ -104,4 +104,58 @@ header {
 }
 
 footer {
+    .HRLine {
+        // 上邊界與下邊界，讓 main 與 footer 有點區隔
+        margin: {
+            top: 15px;
+            bottom: 15px;
+        }
+    }
+    nav {
+        width: $W1 * 8;
+        // 彈性佈局 設定方式：設定在要排列物件的父框架
+        display: flex;
+    }
+    // 彈性佈局 order 重新設定排列順序
+    #audio {
+        order: 1;
+    }
+    .leftline {
+        order: 2;
+    }
+    #graphic {
+        order: 3;
+    }
+    .rightline {
+        order: 4;
+    }
+    #web {
+        order: 5;
+    }
+}
+
+address {
+    width: $W1 * 5;
+    // 彈性佈局
+    display: flex;
+    // 上邊界 nav 與 address 的距離
+    margin: {
+        top: 10px;
+        bottom: 20px;
+    }
+    .line {
+        width: $W1 * 2;
+        height: 30px;
+        @include BG(icon, "line.svg", contain);
+    }
+}
+
+h6 {
+    // 文字置中
+    text-align: center;
+    // 文字尺寸
+    font-size: $Trem * 0.85;
+    // 文字粗細
+    font-weight: 700;
+    background-color: rgb(250, 235, 167);
 }

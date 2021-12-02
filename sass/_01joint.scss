@@ -99,7 +99,7 @@ $W9: $W10 / 10 * 9; // 寬度 9等份
     // 插值(Interpolation)，基於 javascript es6
     // #{$variable_name}，自行輸入值
     // 背景圖位置
-    background-image: url(../imgs/#{$Folder}/#{$Photo});
+    background-image: url(../../imgs/#{$Folder}/#{$Photo});
     // 將文字移至裝置之外
     text-indent: -99999px;
     // 背景圖片對齊(定位點)
