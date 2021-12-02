@@ -78,12 +78,12 @@
                 <p class="clear"></p>
             </ul>
             <!-- html5 新標籤 picture 必要配置標籤 source 和 img (如果所有判斷圖片都讀取不到，就會讀取img上的圖片) 響應式圖片區塊 ；media的判斷，用max-width 最大的寬度設定 -->
-<picture>
+<!-- <picture>
     <source srcset="imgs/banner/banner01.jpg" media="min-width: 576px"> 
     <source srcset="imgs/banner/banner02.jpg" media="max-width: 992px">
     <source srcset="imgs/banner/banner03.jpg" media="min-width: 1024px">
     <img src="imgs/banner/banner01.jpg" alt="">
-</picture>
+</picture> -->
         </div>
     </header>
 
@@ -103,6 +103,15 @@
         </article>
         <article>
             <h1 id="contactbox">聯絡表單</h1>
+            <!-- 表單 form，實際用途是傳輸資料用，將資料寫入資料庫或由資料庫讀出修改 -->
+            <!-- get 傳輸不重要的資料，資料會顯示在網址上； post 傳輸重要的資料，直接加密方式傳送 -->
+            <form action="" method="post">
+                <!-- 姓名 聯絡方式 問題 詳細內容 送出 重新輸入 -->
+                <!-- label 可以直接呼叫 input；for 與 id 相同設定 -->
+                <li>
+                    <label for="UserName">姓名：</label><input type="text" name="" id="UserName">
+                </li>
+            </form>
         </article>
     </article>
 
