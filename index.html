@@ -57,8 +57,8 @@
             </li>
         </ul>
         <!-- 基本輪播圖片 1組為5張圖  -->
-        <div id="BannerBox">
-            <!-- 項目清單 ul li 輪播圖片 超小與小裝置 (左右輪播) -->
+        <!-- <div id="BannerBox">
+            項目清單 ul li 輪播圖片 超小與小裝置 (左右輪播)
             <ul>
                 <li class="box1">
                     <img src="imgs/banner/banner01.jpg" alt="">
@@ -76,14 +76,45 @@
                     <img src="imgs/banner/banner05.jpg" alt="">
                 </li>
                 <p class="clear"></p>
-            </ul>
-            <!-- html5 新標籤 picture 必要配置標籤 source 和 img (如果所有判斷圖片都讀取不到，就會讀取img上的圖片) 響應式圖片區塊 ；media的判斷，用max-width 最大的寬度設定 -->
-<!-- <picture>
-    <source srcset="imgs/banner/banner01.jpg" media="min-width: 576px"> 
-    <source srcset="imgs/banner/banner02.jpg" media="max-width: 992px">
-    <source srcset="imgs/banner/banner03.jpg" media="min-width: 1024px">
-    <img src="imgs/banner/banner01.jpg" alt="">
-</picture> -->
+            </ul> -->
+           
+            <div id="BannerBox">
+            <!-- 項目清單 ul li 輪播圖片 超小與小裝置 (左右輪播) -->
+                <div class="ImgBox">
+                     <!-- html5 新標籤 picture 必要配置標籤 source 和 img (如果所有判斷圖片都讀取不到，就會讀取img上的圖片) 響應式圖片區塊 ；media的判斷，用max-width 最大的寬度設定 -->
+                    <picture class="ImgBox01">
+                        <source class="SmallImg" srcset="imgs/banner/s/banner01.jpg" media="min-width: 576px"> <!--600*600圖-->
+                        <source srcset="imgs/banner/m/banner05 - 複製.jpg" media="max-width: 992px">
+                        <source srcset="imgs/banner/banner01.jpg" media="min-width: 1024px">
+                        <img src="imgs/banner/banner01.jpg" alt="">
+                    </picture>
+                    <picture class="ImgBox02">
+                        <source class="SmallImg" srcset="imgs/banner/s/banner02.jpg" media="min-width: 576px"> <!--600*600圖-->
+                        <source srcset="imgs/banner/m/banner05 - 複製.jpg" media="max-width: 992px">
+                        <source srcset="imgs/banner/banner01.jpg" media="min-width: 1024px">
+                        <img src="imgs/banner/banner02.jpg" alt="">
+                    </picture>
+                    <picture class="ImgBox03">
+                        <source class="SmallImg" srcset="imgs/banner/s/banner03.jpg" media="min-width: 576px"> <!--600*600圖-->
+                        <source srcset="imgs/banner/m/banner05 - 複製.jpg" media="max-width: 992px">
+                        <source srcset="imgs/banner/banner01.jpg" media="min-width: 1024px">
+                        <img src="imgs/banner/banner03.jpg" alt="">
+                    </picture>
+                    <picture class="ImgBox04">
+                        <source class="SmallImg" srcset="imgs/banner/s/banner04.jpg" media="min-width: 576px"> <!--600*600圖-->
+                        <source srcset="imgs/banner/m/banner05 - 複製.jpg" media="max-width: 992px">
+                        <source srcset="imgs/banner/banner01.jpg" media="min-width: 1024px">
+                        <img src="imgs/banner/banner04.jpg" alt="">
+                    </picture>
+                    <picture class="ImgBox05">
+                        <source class="SmallImg" srcset="imgs/banner/s/banner05.jpg" media="min-width: 576px"> <!--600*600圖-->
+                        <source srcset="imgs/banner/m/banner05 - 複製.jpg" media="max-width: 992px">
+                        <source srcset="imgs/banner/banner01.jpg" media="min-width: 1024px">
+                        <img src="imgs/banner/banner05.jpg" alt="">
+                    </picture>
+                </div>
+            </div>
+
         </div>
     </header>
 
