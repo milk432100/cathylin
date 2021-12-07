@@ -205,10 +205,10 @@ header nav #contact {
     overflow-x: auto;
     background-color: antiquewhite;
   }
-  header #BannerBox ul {
+  header #BannerBox .ImgBox {
     width: 500%;
   }
-  header #BannerBox ul li {
+  header #BannerBox .ImgBox .SmallImg {
     width: 100vw;
     float: left;
   }
@@ -293,13 +293,6 @@ header nav #contact {
     overflow-x: auto;
     background-color: antiquewhite;
   }
-  header #BannerBox ul {
-    width: 500%;
-  }
-  header #BannerBox ul li {
-    width: 100vw;
-    float: left;
-  }
 }
 @media screen and (min-width: 992px) {
   header nav {
@@ -341,13 +334,6 @@ header nav #contact {
     width: 100%;
     overflow-x: auto;
     background-color: antiquewhite;
-  }
-  #BannerBox ul {
-    width: 500%;
-  }
-  #BannerBox ul li {
-    width: 100vw;
-    float: left;
   }
 
   #main article {

@@ -59,44 +59,41 @@
         <!-- 基本輪播圖片 1組為5張圖  -->
         <div id="BannerBox">
             <!-- 項目清單 ul li 輪播圖片 超小與小裝置 (左右輪播) -->
-            <div id="BannerBox">
-                <div class="ImgBox">
-                     <!-- html5 新標籤 picture 必要配置標籤 source 和 img (如果所有判斷圖片都讀取不到，就會讀取img上的圖片) 響應式圖片區塊 ；media的判斷，用max-width 最大的寬度設定 -->
-                     <!-- 將 picture 標籤當為一張片，裡面可以寫入不同尺寸的相同圖片；例：輪播圖有5張，須設定5個 picture 標籤，每組標籤內可放入不同尺寸但內容卻相同的圖片 -->
-                    <picture class="ImgBox01 SmallImg">
-                        <source class="SmallImg" srcset="imgs/banner/s/banner01.jpg" media="min-width: 576px"> <!--600*600圖-->
-                        <source srcset="imgs/banner/m/banner05 - 複製.jpg" media="max-width: 992px"> <!--800*800-->
+            <div class="ImgBox">
+                 <!-- html5 新標籤 picture 必要配置標籤 source 和 img (如果所有判斷圖片都讀取不到，就會讀取img上的圖片) 響應式圖片區塊 ；media的判斷，用max-width 最大的寬度設定 -->
+                 <!-- 將 picture 標籤當為一張片，裡面可以寫入不同尺寸的相同圖片；例：輪播圖有5張，須設定5個 picture 標籤，每組標籤內可放入不同尺寸但內容卻相同的圖片 -->
+                <picture class="ImgBox01 SmallImg">
+                        <source class="SmallImg" srcset="imgs/banner/s/banner01.jpg" media="min-width: 767px"> <!--600*600圖-->
+                        <source srcset="imgs/banner/m/banner05 - 複製.jpg" media="max-width: 1023px"> <!--800*800-->
                         <source srcset="imgs/banner/banner01.jpg" media="min-width: 1024px">
-                        <img src="imgs/banner/banner01.jpg" alt="">
-                    </picture>
-                    <picture class="ImgBox02 SmallImg">
-                        <source class="SmallImg" srcset="imgs/banner/s/banner02.jpg" media="min-width: 576px"> <!--600*600圖-->
-                        <source srcset="imgs/banner/m/banner05 - 複製.jpg" media="max-width: 992px">
+                        <img src="imgs/icon/camera.svg" alt="">
+                </picture>
+                <picture class="ImgBox02 SmallImg">
+                        <source class="SmallImg" srcset="imgs/banner/s/banner02.jpg" media="min-width: 767px"> <!--600*600圖-->
+                        <source srcset="imgs/banner/m/banner05 - 複製.jpg" media="max-width: 1023px">
                         <source srcset="imgs/banner/banner01.jpg" media="min-width: 1024px">
-                        <img src="imgs/banner/banner02.jpg" alt="">
-                    </picture>
-                    <picture class="ImgBox03 SmallImg">
-                        <source class="SmallImg" srcset="imgs/banner/s/banner03.jpg" media="min-width: 576px"> <!--600*600圖-->
-                        <source srcset="imgs/banner/m/banner05 - 複製.jpg" media="max-width: 992px">
+                        <img src="imgs/icon/camera.svg" alt="">
+                </picture>
+                <picture class="ImgBox03 SmallImg">
+                        <source class="SmallImg" srcset="imgs/banner/s/banner03.jpg" media="min-width: 767px"> <!--600*600圖-->
+                        <source srcset="imgs/banner/m/banner05 - 複製.jpg" media="max-width: 1023px">
                         <source srcset="imgs/banner/banner01.jpg" media="min-width: 1024px">
-                        <img src="imgs/banner/banner03.jpg" alt="">
-                    </picture>
-                    <picture class="ImgBox04 SmallImg">
-                        <source class="SmallImg" srcset="imgs/banner/s/banner04.jpg" media="min-width: 576px"> <!--600*600圖-->
-                        <source srcset="imgs/banner/m/banner05 - 複製.jpg" media="max-width: 992px">
+                        <img src="imgs/icon/camera.svg" alt="">
+                </picture>
+                <picture class="ImgBox04 SmallImg">
+                        <source class="SmallImg" srcset="imgs/banner/s/banner04.jpg" media="min-width: 767px"> <!--600*600圖-->
+                        <source srcset="imgs/banner/m/banner05 - 複製.jpg" media="max-width: 1023px">
                         <source srcset="imgs/banner/banner01.jpg" media="min-width: 1024px">
-                        <img src="imgs/banner/banner04.jpg" alt="">
-                    </picture>
-                    <picture class="ImgBox05 SmallImg">
-                        <source class="SmallImg" srcset="imgs/banner/s/banner05.jpg" media="min-width: 576px"> <!--600*600圖-->
-                        <source srcset="imgs/banner/m/banner05 - 複製.jpg" media="max-width: 992px">
+                        <img src="imgs/icon/camera.svg" alt="">
+                </picture>
+                <picture class="ImgBox05 SmallImg">
+                        <source class="SmallImg" srcset="imgs/banner/s/banner05.jpg" media="min-width: 767px"> <!--600*600圖-->
+                        <source srcset="imgs/banner/m/banner05 - 複製.jpg" media="max-width: 1023px">
                         <source srcset="imgs/banner/banner01.jpg" media="min-width: 1024px">
-                        <img src="imgs/banner/banner05.jpg" alt="">
-                    </picture>
-                </div>
+                        <img src="imgs/icon/camera.svg" alt="">
+                </picture>
             </div>
-
-        <!-- </div> -->
+        </div>
     </header>
 
     <!-- 內容 一頁式用區塊分內容 article文章區塊 標題(標籤h1~h6)-->
