@@ -437,6 +437,18 @@ header nav #project,
 header nav #contact {
     display: block;
   }
+  header #BannerBox {
+    width: 100%;
+    overflow-x: auto;
+    background-color: antiquewhite;
+  }
+  header #BannerBox .ImgBox {
+    width: 500%;
+  }
+  header #BannerBox .ImgBox .SmallImg {
+    width: 100vw;
+    float: left;
+  }
 
   #menu {
     display: none;
