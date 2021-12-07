@@ -95,7 +95,7 @@ header nav #contact {
   header #BannerBox .ImgBox {
     width: 500%;
   }
-  header #BannerBox .ImgBox li {
+  header #BannerBox .ImgBox .SmallImg {
     width: 100vw;
     float: left;
   }
