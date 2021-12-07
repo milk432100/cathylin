@@ -76,11 +76,12 @@ header {
     // vw(以裝置的寬為寬度) vh(以裝置的高為高度)
     #BannerBox {
         width: $W10;
-        height: $BHsmall;
+        // height: $BHsmall;
+        // 因為，框架高度會由圖片帶出，所以不用設定高度
         // 超出範圍設定，能滑動x軸，讓圖片在框架中左右滑動
         overflow-x: auto;
         background-color: antiquewhite;
-        ul {
+        .ImgBox {
             // 圖片框的寬度尺寸
             width: $W10 * 5;
             li {

@@ -89,14 +89,13 @@ header nav #contact {
   }
   header #BannerBox {
     width: 100%;
-    height: 280px;
     overflow-x: auto;
     background-color: antiquewhite;
   }
-  header #BannerBox ul {
+  header #BannerBox .ImgBox {
     width: 500%;
   }
-  header #BannerBox ul li {
+  header #BannerBox .ImgBox li {
     width: 100vw;
     float: left;
   }
