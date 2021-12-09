@@ -135,30 +135,66 @@ footer {
     #web {
         order: 5;
     }
+    address {
+        width: $W1 * 5;
+        // 彈性佈局
+        display: flex;
+        // 上邊界 nav 與 address 的距離
+        margin: {
+            top: 10px;
+            bottom: 20px;
+        }
+        .line {
+            width: $W1 * 2;
+            height: 30px;
+            @include BG(icon, "line.svg", contain);
+        }
+    }
+
+    h6 {
+        // 文字置中
+        text-align: center;
+        // 文字尺寸
+        font-size: $Trem * 0.85;
+        // 文字粗細
+        font-weight: 700;
+        background-color: rgb(250, 235, 167);
+    }
 }
 
-address {
-    width: $W1 * 5;
-    // 彈性佈局
-    display: flex;
-    // 上邊界 nav 與 address 的距離
-    margin: {
-        top: 10px;
-        bottom: 20px;
-    }
-    .line {
-        width: $W1 * 2;
-        height: 30px;
-        @include BG(icon, "line.svg", contain);
-    }
-}
+#main {
+    #contactbox {
+        background-color: rgb(255, 237, 158);
 
-h6 {
-    // 文字置中
-    text-align: center;
-    // 文字尺寸
-    font-size: $Trem * 0.85;
-    // 文字粗細
-    font-weight: 700;
-    background-color: rgb(250, 235, 167);
+        // 標題
+        #contacttitle {
+            // 外間距 margin:上間距無法將物件與父框架，顯示設定的距離，故改用 內間距 padding 設定
+            padding: {
+                top: 15px;
+                bottom: 15px;
+            }
+        }
+
+        form {
+            // 寬度 左右留白
+            width: $W1 * 9;
+            // 繼承 單獨給表單使用
+            %PI {
+                padding: {
+                    top: 10px;
+                    bottom: 10px;
+                }
+                // background-color: beige;
+            }
+
+            // 子元素選擇器
+            > div {
+                @extend %PI;
+            }
+
+            .E-mail2 {
+                @include Dn;
+            }
+        }
+    }
 }
