@@ -163,11 +163,19 @@ header nav #contact {
     padding-bottom: 15px;
   }
   #main #contactbox form {
-    width: 75vw;
+    width: 75%;
+    background-color: aquamarine;
   }
   #main #contactbox form > div {
     padding-top: 10px;
     padding-bottom: 10px;
+    margin-bottom: 5px;
+  }
+  #main #contactbox form > .Text > li, #main #contactbox form > .Ques > p, #main #contactbox form > .Mail > label, #main #contactbox form > #Namebox > label {
+    margin-bottom: 10px;
+  }
+  #main #contactbox form > div {
+    font-size: 1.3rem;
   }
   #main #contactbox form > #Namebox {
     display: -webkit-box;
@@ -178,6 +186,8 @@ header nav #contact {
   }
   #main #contactbox form > #Namebox > label {
     width: 100%;
+    background-color: #3ea180;
+    height: 30px;
   }
   #main #contactbox form > #Namebox > input {
     width: 75%;
@@ -191,9 +201,10 @@ header nav #contact {
   }
   #main #contactbox form > .Mail > label {
     width: 100%;
+    background-color: aquamarine;
   }
   #main #contactbox form > .Mail > input {
-    width: 80%;
+    width: 75%;
   }
   #main #contactbox form > .Ques {
     display: -webkit-box;
@@ -204,13 +215,12 @@ header nav #contact {
   }
   #main #contactbox form > .Ques > p {
     width: 100%;
-    margin-bottom: 15px;
   }
   #main #contactbox form > .Ques > li {
     width: 50%;
     margin-bottom: 15px;
   }
-  #main #contactbox form > .Text > label {
+  #main #contactbox form > .Text > li {
     width: 100%;
   }
   #main #contactbox form > .Text > textarea {

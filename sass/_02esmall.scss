@@ -177,20 +177,28 @@ footer {
 
         form {
             // 寬度 左右留白
-            width: $W1 * 7.5;
-            // background-color: aquamarine;
+            width: $Wper * 7.5;
+            background-color: aquamarine;
             // 繼承 單獨給表單使用
             %PI {
                 padding: {
                     top: 10px;
                     bottom: 10px;
                 }
-                // background-color: beige;
+                margin: {
+                    bottom: 5px;
+                }
+            }
+            %TitlM {
+                margin: {
+                    bottom: 10px;
+                }
             }
 
-            // 子元素選擇器
+            // 子元素選擇器 >
             > div {
                 @extend %PI;
+                font-size: $Trem * 1.3;
             }
 
             > #Namebox {
@@ -199,6 +207,9 @@ footer {
                 flex-wrap: wrap;
                 > label {
                     width: $Wper * 10;
+                    @extend %TitlM;
+                    background-color: rgb(62, 161, 128);
+                    height: 30px;
                 }
                 > input {
                     width: $Wper * 7.5;
@@ -211,9 +222,11 @@ footer {
                 flex-wrap: wrap;
                 > label {
                     width: $Wper * 10;
+                    @extend %TitlM;
+                    background-color: aquamarine;
                 }
                 > input {
-                    width: $Wper * 8;
+                    width: $Wper * 7.5;
                 }
             }
 
@@ -225,16 +238,14 @@ footer {
 
                 > p {
                     // 寬度
-                    width: 100%;
+                    width: $Wper * 10;
                     // 外間距
-                    margin: {
-                        bottom: 15px;
-                    }
+                    @extend %TitlM;
                 }
 
                 > li {
                     // 寬度
-                    width: 50%;
+                    width: $Wper * 5;
                     margin: {
                         bottom: 15px;
                     }
@@ -242,11 +253,12 @@ footer {
             }
 
             > .Text {
-                > label {
-                    width: 100%;
+                > li {
+                    width: $Wper * 10;
+                    @extend %TitlM;
                 }
                 > textarea {
-                    width: 95%;
+                    width: $Wper * 9.5;
                 }
             }
 
