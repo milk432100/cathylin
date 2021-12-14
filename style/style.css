@@ -158,6 +158,9 @@ header nav #contact {
     font-weight: 700;
   }
 
+  #main #contactbox {
+    background-image: url(../../imgs/bg/back_002.gif);
+  }
   #main #contactbox #contacttitle {
     padding-top: 15px;
     padding-bottom: 15px;
@@ -174,6 +177,14 @@ header nav #contact {
   #main #contactbox form > .Text > li, #main #contactbox form > .Ques > p, #main #contactbox form > .Mail > label, #main #contactbox form > #Namebox > label {
     margin-bottom: 10px;
   }
+  #main #contactbox form > .Mail > input, #main #contactbox form > #Namebox > input {
+    width: 75%;
+    height: 30px;
+    font-size: 1.1rem;
+    padding-left: 10px;
+    color: #ffd620;
+    font-weight: 500;
+  }
   #main #contactbox form > div {
     font-size: 1.3rem;
   }
@@ -186,11 +197,26 @@ header nav #contact {
   }
   #main #contactbox form > #Namebox > label {
     width: 100%;
-    background-color: #3ea180;
-    height: 30px;
   }
-  #main #contactbox form > #Namebox > input {
-    width: 75%;
+  #main #contactbox form > #Namebox > input [type=text]::-webkit-input-placeholder {
+    color: #cf4d10;
+    font-weight: 600;
+  }
+  #main #contactbox form > #Namebox > input [type=text]::-moz-placeholder {
+    color: #cf4d10;
+    font-weight: 600;
+  }
+  #main #contactbox form > #Namebox > input [type=text]:-ms-input-placeholder {
+    color: #cf4d10;
+    font-weight: 600;
+  }
+  #main #contactbox form > #Namebox > input [type=text]::-ms-input-placeholder {
+    color: #cf4d10;
+    font-weight: 600;
+  }
+  #main #contactbox form > #Namebox > input [type=text]::placeholder {
+    color: #cf4d10;
+    font-weight: 600;
   }
   #main #contactbox form > .Mail {
     display: -webkit-box;
@@ -202,9 +228,6 @@ header nav #contact {
   #main #contactbox form > .Mail > label {
     width: 100%;
     background-color: aquamarine;
-  }
-  #main #contactbox form > .Mail > input {
-    width: 75%;
   }
   #main #contactbox form > .Ques {
     display: -webkit-box;

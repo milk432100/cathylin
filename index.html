@@ -114,6 +114,7 @@
             <h1 id="contacttitle">聯絡表單</h1>
             <!-- 表單 form，實際用途是傳輸資料用，將資料寫入資料庫或由資料庫讀出修改 -->
             <!-- get 傳輸不重要的資料，資料會顯示在網址上； post 傳輸重要的資料，直接加密方式傳送 -->
+
             <form action="" method="get">
                 <!-- 姓名 聯絡方式 問題 詳細內容 送出 重新輸入 -->
                 <!-- label 可以直接呼叫 input；for 與 id 相同設定 -->
@@ -124,7 +125,8 @@
                 <div id="NameBox">
                     <label for="UserName">姓名</label>
                     
-                    <input type="text" name="" id="UserName" value="請輸入中文姓名" required minlength="3" maxlength="5" >
+                    <input type="text" name="" id="UserName" placeholder="請輸入中文姓名" 
+                    required minlength="3" maxlength="5" >
                 </div>
                 
                 <div class="Mail">

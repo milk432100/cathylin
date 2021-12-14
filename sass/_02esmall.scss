@@ -164,7 +164,7 @@ footer {
 
 #main {
     #contactbox {
-        // background-color: rgb(255, 237, 158);
+        background-image: url(../../imgs/bg/back_002.gif);
 
         // 標題
         #contacttitle {
@@ -195,6 +195,20 @@ footer {
                 }
             }
 
+            %InputInBox {
+                width: $Wper * 7.5;
+                height: 30px;
+                font-size: $Trem * 1.1;
+                // 內間距
+                padding: {
+                    left: 10px;
+                }
+                // 使用者輸入時，呈現的樣式
+                color: rgb(255, 214, 32);
+                // 文字粗細
+                font-weight: 500;
+            }
+
             // 子元素選擇器 >
             > div {
                 @extend %PI;
@@ -208,11 +222,17 @@ footer {
                 > label {
                     width: $Wper * 10;
                     @extend %TitlM;
-                    background-color: rgb(62, 161, 128);
-                    height: 30px;
+                    // color: blue;
+                    // background-color: rgb(62, 161, 128);
+                    // height: 30px;
                 }
                 > input {
-                    width: $Wper * 7.5;
+                    @extend %InputInBox;
+                }
+                // 偽類別，使用者觀看到的樣式
+                > input [type="text"]::placeholder {
+                    color: rgb(207, 77, 16);
+                    font-weight: 600;
                 }
             }
 
@@ -226,7 +246,7 @@ footer {
                     background-color: aquamarine;
                 }
                 > input {
-                    width: $Wper * 7.5;
+                    @extend %InputInBox;
                 }
             }
 
