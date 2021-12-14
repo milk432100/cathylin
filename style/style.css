@@ -156,22 +156,65 @@ header nav #contact {
     text-align: center;
     font-size: 0.85rem;
     font-weight: 700;
-    background-color: #faeba7;
   }
 
-  #main #contactbox {
-    background-color: #ffed9e;
-  }
   #main #contactbox #contacttitle {
     padding-top: 15px;
     padding-bottom: 15px;
   }
   #main #contactbox form {
-    width: 90vw;
+    width: 75vw;
   }
   #main #contactbox form > div {
     padding-top: 10px;
     padding-bottom: 10px;
+  }
+  #main #contactbox form > #Namebox {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  #main #contactbox form > #Namebox > label {
+    width: 100%;
+  }
+  #main #contactbox form > #Namebox > input {
+    width: 75%;
+  }
+  #main #contactbox form > .Mail {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  #main #contactbox form > .Mail > label {
+    width: 100%;
+  }
+  #main #contactbox form > .Mail > input {
+    width: 80%;
+  }
+  #main #contactbox form > .Ques {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  #main #contactbox form > .Ques > p {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  #main #contactbox form > .Ques > li {
+    width: 50%;
+    margin-bottom: 15px;
+  }
+  #main #contactbox form > .Text > label {
+    width: 100%;
+  }
+  #main #contactbox form > .Text > textarea {
+    width: 95%;
   }
   #main #contactbox form .E-mail2 {
     display: none;

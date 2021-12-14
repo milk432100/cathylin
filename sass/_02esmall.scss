@@ -158,13 +158,13 @@ footer {
         font-size: $Trem * 0.85;
         // 文字粗細
         font-weight: 700;
-        background-color: rgb(250, 235, 167);
+        // background-color: rgb(250, 235, 167);
     }
 }
 
 #main {
     #contactbox {
-        background-color: rgb(255, 237, 158);
+        // background-color: rgb(255, 237, 158);
 
         // 標題
         #contacttitle {
@@ -177,7 +177,8 @@ footer {
 
         form {
             // 寬度 左右留白
-            width: $W1 * 9;
+            width: $W1 * 7.5;
+            // background-color: aquamarine;
             // 繼承 單獨給表單使用
             %PI {
                 padding: {
@@ -190,6 +191,63 @@ footer {
             // 子元素選擇器
             > div {
                 @extend %PI;
+            }
+
+            > #Namebox {
+                // 彈性佈局
+                display: flex;
+                flex-wrap: wrap;
+                > label {
+                    width: $Wper * 10;
+                }
+                > input {
+                    width: $Wper * 7.5;
+                }
+            }
+
+            > .Mail {
+                // 彈性佈局
+                display: flex;
+                flex-wrap: wrap;
+                > label {
+                    width: $Wper * 10;
+                }
+                > input {
+                    width: $Wper * 8;
+                }
+            }
+
+            > .Ques {
+                //彈性佈局
+                display: flex;
+                //換行
+                flex-wrap: wrap;
+
+                > p {
+                    // 寬度
+                    width: 100%;
+                    // 外間距
+                    margin: {
+                        bottom: 15px;
+                    }
+                }
+
+                > li {
+                    // 寬度
+                    width: 50%;
+                    margin: {
+                        bottom: 15px;
+                    }
+                }
+            }
+
+            > .Text {
+                > label {
+                    width: 100%;
+                }
+                > textarea {
+                    width: 95%;
+                }
             }
 
             .E-mail2 {

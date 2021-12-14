@@ -122,15 +122,14 @@
                 <!-- readonly 唯讀，不可以更改內容；由資料庫導入資料時設定，可利用 javascript 判斷式開啟功能 -->
                 <!-- 必填 required；指定最多能輸入多少字 maxlength； 指定最少需要輸入多少字 minlength -->
                 <div id="NameBox">
-                    <label for="UserName">姓名：</label>
+                    <label for="UserName">姓名</label>
                     <input type="text" name="" id="UserName" value="請輸入中文姓名" required minlength="3" maxlength="5" >
                 </div>
                 
                 <div class="Mail">
-                    <label for="E-mail">
-                    電子信箱 
+                    <label for="E-mail">電子信箱</label>
+
                     <input type="email" name="" id="E-mail" required placeholder="輸入可以接收到的電子信箱">
-                </label>
                 </div>
                 
                 <!-- label 沒有換行功能；目前樣式表無法控制 label 標籤，故用 div 作為外框 -->
@@ -150,9 +149,8 @@
                 </div>
                 <!-- 詢問問題 -->
                 <div class="Ques">
-                    <label for="Question">
-                        <li>詢問問題</li>
-                        <!-- 單選鈕 radio 送出資料為同一群組，name的名稱要相同-->
+                        <p>詢問問題</p>
+                        <!-- 單選鈕 radio 送出資料為同一群組，name的名稱要相同；寫入資料庫的值為 value的內容-->
                         <li>
                             <input type="radio" name="Question" value="平面設計">平面設計
                         </li>
@@ -165,14 +163,12 @@
                         <li>
                             <input type="radio" name="Question" value="其他合作">其他合作
                         </li>
-                    </label>
                 </div>
                 <!-- 多行文字 textarea ； placeholder 輸入的提示訊息，輸入資料時會自動消失-->
                 <div class="Text">
-                    <label for="">
-                        詳細內容
-                        <textarea name="" id="" cols="30" rows="10" placeholder="請輸入問題內容，限制100個字，最少10個字"></textarea>
-                    </label>
+                    <label for="">詳細內容</label>
+                    
+                    <textarea name="" id="" cols="30" rows="10" placeholder="請輸入問題內容，限制100個字，最少10個字"></textarea>
                 </div>
                 <!-- 按鈕 -->
                 <div class="FormBtn">
