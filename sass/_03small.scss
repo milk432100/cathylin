@@ -1,9 +1,16 @@
 // 有需要這尺寸的裝置，在寫樣式語法
+#Top {
+    @include Dn;
+}
 
 header {
     nav {
         // 屬於 nav 寬度 % ;高度 px ;背景色(暫時)
-        // width: $NW;
+        width: $NW;
+        // 停駐在畫面上方，不隨著畫面滑動而消失
+        position: fixed;
+        top: 0;
+
         // height: $NH;
         // background-color: yellow;
 
@@ -75,6 +82,12 @@ header {
         // 超出範圍設定，能滑動x軸，讓圖片在框架中左右滑動
         overflow-x: auto;
         background-color: antiquewhite;
+
+        // 導覽固定在上方，會形成浮動狀態，故廣告區的上方要用 外間距設定為高度
+        margin: {
+            top: $NH;
+        }
+
         .ImgBox {
             // 圖片框的寬度尺寸
             width: $W10 * 5;

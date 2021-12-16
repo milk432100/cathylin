@@ -49,6 +49,10 @@ header {
 }
 
 @media screen and (max-width: 576px) {
+  #Top {
+    display: none;
+  }
+
   header nav {
     width: 100vw;
     position: fixed;
@@ -93,6 +97,7 @@ header nav #contact {
     width: 100vw;
     overflow-x: auto;
     background-color: antiquewhite;
+    margin-top: 65px;
   }
   header #BannerBox .ImgBox {
     width: 500vw;
@@ -282,6 +287,15 @@ header nav #contact {
   }
 }
 @media screen and (min-width: 576px) {
+  #Top {
+    display: none;
+  }
+
+  header nav {
+    width: 100vw;
+    position: fixed;
+    top: 0;
+  }
   header nav li {
     float: left;
   }
@@ -324,6 +338,7 @@ header nav #contact {
     width: 100vw;
     overflow-x: auto;
     background-color: antiquewhite;
+    margin-top: 65px;
   }
   header #BannerBox .ImgBox {
     width: 500vw;
@@ -574,14 +589,6 @@ header nav #contact {
     width: 100vw;
     overflow-x: auto;
     background-color: antiquewhite;
-  }
-
-  #main article {
-    width: 100vw;
-    height: 650px;
-    border-bottom-width: 2px;
-    border-bottom-style: solid;
-    border-bottom-color: tomato;
   }
 
   footer .HRLine {
