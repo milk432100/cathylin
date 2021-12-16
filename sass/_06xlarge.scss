@@ -65,3 +65,11 @@ header {
 
 footer {
 }
+
+#main {
+    > #ContactBox {
+        > form {
+            width: $Wper * 4.5;
+        }
+    }
+}

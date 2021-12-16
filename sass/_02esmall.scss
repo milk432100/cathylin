@@ -8,6 +8,11 @@ header {
         width: $NW;
         // 設定手機版的導覽列 62行，定位點語法與階層語法，被 nav 的高設定給抵消，所以才隱藏 nav 的高度
         // height: $NH;
+
+        // 停駐在畫面上方，不隨著畫面滑動而消失
+        position: fixed;
+        top: 0;
+
         background-color: rgb(255, 236, 196);
 
         // 指向清單物件 li
@@ -110,7 +115,8 @@ footer {
     .HRLine {
         // 上邊界與下邊界，讓 main 與 footer 有點區隔
         margin: {
-            top: 15px;
+            // 減少空白
+            // top: 15px;
             bottom: 15px;
         }
     }
@@ -183,7 +189,8 @@ footer {
             %PI {
                 padding: {
                     top: 10px;
-                    bottom: 10px;
+                    // 表單與頁尾之間的距離
+                    bottom: 15px;
                 }
                 margin: {
                     bottom: 5px;
@@ -209,6 +216,17 @@ footer {
                 font-weight: 500;
             }
 
+            %BtnSR {
+                width: 100px;
+                height: 35px;
+                font-size: $Trem * 1.05;
+                color: white;
+                // 按鈕平面化，將邊框線段為 0
+                border: 0;
+                // 圓角
+                border-radius: 15px;
+            }
+
             // 子元素選擇器 >
             > div {
                 @extend %PI;
@@ -231,8 +249,8 @@ footer {
                 }
                 // 偽元素，使用者觀看到的樣式：表單統一設計樣式
                 > input [type="text"]::placeholder {
-                    // color: rgb(207, 77, 16);
-                    // font-weight: 600;
+                    color: rgb(207, 77, 16);
+                    font-weight: 600;
                 }
             }
 
@@ -287,30 +305,19 @@ footer {
             > .FormBtn {
                 width: $Wper * 10;
                 display: flex;
+                margin: {
+                    bottom: 0;
+                }
 
                 > input[type="submit"] {
-                    width: 100px;
-                    height: 35px;
-                    font-size: $Trem * 1.05;
+                    @extend %BtnSR;
                     order: 2;
-                    color: white;
-                    // 按鈕平面化，將邊框線段為 0
-                    border: 0;
-                    // 圓角
-                    border-radius: 15px;
                     background-color: rgb(207, 77, 16);
                 }
 
                 > input[type="reset"] {
-                    width: 100px;
-                    height: 35px;
-                    font-size: $Trem * 1.05;
+                    @extend %BtnSR;
                     order: 1;
-                    color: white;
-                    // 按鈕平面化，將邊框線段為 0
-                    border: 0;
-                    // 圓角
-                    border-radius: 15px;
                     background-color: rgb(15, 127, 202);
                 }
             }
