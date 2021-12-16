@@ -167,18 +167,17 @@ header nav #contact {
   }
   #main #contactbox form {
     width: 75%;
-    background-color: aquamarine;
   }
   #main #contactbox form > div {
     padding-top: 10px;
     padding-bottom: 10px;
     margin-bottom: 5px;
   }
-  #main #contactbox form > .Text > li, #main #contactbox form > .Ques > p, #main #contactbox form > .Mail > label, #main #contactbox form > #Namebox > label {
+  #main #contactbox form > .TextArea > li, #main #contactbox form > .Ques > p, #main #contactbox form > .Mail > label, #main #contactbox form > #Namebox > li {
     margin-bottom: 10px;
   }
-  #main #contactbox form > .Mail > input, #main #contactbox form > #Namebox > input {
-    width: 75%;
+  #main #contactbox form > .Mail > input, #main #contactbox form > #Namebox > input[type=text] {
+    width: 100%;
     height: 30px;
     font-size: 1.1rem;
     padding-left: 10px;
@@ -195,28 +194,8 @@ header nav #contact {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
-  #main #contactbox form > #Namebox > label {
+  #main #contactbox form > #Namebox > li {
     width: 100%;
-  }
-  #main #contactbox form > #Namebox > input [type=text]::-webkit-input-placeholder {
-    color: #cf4d10;
-    font-weight: 600;
-  }
-  #main #contactbox form > #Namebox > input [type=text]::-moz-placeholder {
-    color: #cf4d10;
-    font-weight: 600;
-  }
-  #main #contactbox form > #Namebox > input [type=text]:-ms-input-placeholder {
-    color: #cf4d10;
-    font-weight: 600;
-  }
-  #main #contactbox form > #Namebox > input [type=text]::-ms-input-placeholder {
-    color: #cf4d10;
-    font-weight: 600;
-  }
-  #main #contactbox form > #Namebox > input [type=text]::placeholder {
-    color: #cf4d10;
-    font-weight: 600;
   }
   #main #contactbox form > .Mail {
     display: -webkit-box;
@@ -227,7 +206,6 @@ header nav #contact {
   }
   #main #contactbox form > .Mail > label {
     width: 100%;
-    background-color: aquamarine;
   }
   #main #contactbox form > .Ques {
     display: -webkit-box;
@@ -242,12 +220,44 @@ header nav #contact {
   #main #contactbox form > .Ques > li {
     width: 50%;
     margin-bottom: 15px;
+    text-align: center;
   }
-  #main #contactbox form > .Text > li {
+  #main #contactbox form > .TextArea > li {
     width: 100%;
   }
-  #main #contactbox form > .Text > textarea {
-    width: 95%;
+  #main #contactbox form > .TextArea > textarea {
+    width: 100%;
+    font-size: 1.05rem;
+  }
+  #main #contactbox form > .FormBtn {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  #main #contactbox form > .FormBtn > input[type=submit] {
+    width: 100px;
+    height: 35px;
+    font-size: 1.05rem;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    color: white;
+    border: 0;
+    border-radius: 15px;
+    background-color: #cf4d10;
+  }
+  #main #contactbox form > .FormBtn > input[type=reset] {
+    width: 100px;
+    height: 35px;
+    font-size: 1.05rem;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    color: white;
+    border: 0;
+    border-radius: 15px;
+    background-color: #0f7fca;
   }
   #main #contactbox form .E-mail2 {
     display: none;

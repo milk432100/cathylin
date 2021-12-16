@@ -178,7 +178,7 @@ footer {
         form {
             // 寬度 左右留白
             width: $Wper * 7.5;
-            background-color: aquamarine;
+            // background-color: aquamarine;
             // 繼承 單獨給表單使用
             %PI {
                 padding: {
@@ -196,7 +196,7 @@ footer {
             }
 
             %InputInBox {
-                width: $Wper * 7.5;
+                width: $Wper * 10;
                 height: 30px;
                 font-size: $Trem * 1.1;
                 // 內間距
@@ -219,20 +219,20 @@ footer {
                 // 彈性佈局
                 display: flex;
                 flex-wrap: wrap;
-                > label {
+                > li {
                     width: $Wper * 10;
                     @extend %TitlM;
                     // color: blue;
                     // background-color: rgb(62, 161, 128);
                     // height: 30px;
                 }
-                > input {
+                > input[type="text"] {
                     @extend %InputInBox;
                 }
-                // 偽類別，使用者觀看到的樣式
+                // 偽元素，使用者觀看到的樣式：表單統一設計樣式
                 > input [type="text"]::placeholder {
-                    color: rgb(207, 77, 16);
-                    font-weight: 600;
+                    // color: rgb(207, 77, 16);
+                    // font-weight: 600;
                 }
             }
 
@@ -243,7 +243,7 @@ footer {
                 > label {
                     width: $Wper * 10;
                     @extend %TitlM;
-                    background-color: aquamarine;
+                    // background-color: aquamarine;
                 }
                 > input {
                     @extend %InputInBox;
@@ -269,16 +269,49 @@ footer {
                     margin: {
                         bottom: 15px;
                     }
+                    text-align: center;
                 }
             }
 
-            > .Text {
+            > .TextArea {
                 > li {
                     width: $Wper * 10;
                     @extend %TitlM;
                 }
                 > textarea {
-                    width: $Wper * 9.5;
+                    width: $Wper * 10;
+                    font-size: $Trem * 1.05;
+                }
+            }
+
+            > .FormBtn {
+                width: $Wper * 10;
+                display: flex;
+
+                > input[type="submit"] {
+                    width: 100px;
+                    height: 35px;
+                    font-size: $Trem * 1.05;
+                    order: 2;
+                    color: white;
+                    // 按鈕平面化，將邊框線段為 0
+                    border: 0;
+                    // 圓角
+                    border-radius: 15px;
+                    background-color: rgb(207, 77, 16);
+                }
+
+                > input[type="reset"] {
+                    width: 100px;
+                    height: 35px;
+                    font-size: $Trem * 1.05;
+                    order: 1;
+                    color: white;
+                    // 按鈕平面化，將邊框線段為 0
+                    border: 0;
+                    // 圓角
+                    border-radius: 15px;
+                    background-color: rgb(15, 127, 202);
                 }
             }
 

@@ -123,8 +123,7 @@
                 <!-- readonly 唯讀，不可以更改內容；由資料庫導入資料時設定，可利用 javascript 判斷式開啟功能 -->
                 <!-- 必填 required；指定最多能輸入多少字 maxlength； 指定最少需要輸入多少字 minlength -->
                 <div id="NameBox">
-                    <label for="UserName">姓名</label>
-                    
+                    <li for="UserName">姓名</li>
                     <input type="text" name="" id="UserName" placeholder="請輸入中文姓名" 
                     required minlength="3" maxlength="5" >
                 </div>
@@ -168,7 +167,7 @@
                         </li>
                 </div>
                 <!-- 多行文字 textarea ； placeholder 輸入的提示訊息，輸入資料時會自動消失-->
-                <div class="Text">
+                <div class="TextArea">
                     <li><label for="TextArea">詳細內容</label></li>
                     
                     <textarea name="" id="TextArea" cols="30" rows="10" placeholder="請輸入問題內容，限制100個字，最少10個字"></textarea>
