@@ -1,3 +1,17 @@
+#Top {
+    @include On;
+    // 浮動
+    position: absolute;
+    z-index: 20;
+    width: 60px;
+    height: 60px;
+    background-color: rgba(252, 243, 197, 0.404);
+    // 停留在畫面右下方
+    position: fixed;
+    bottom: 50px;
+    right: 5px;
+}
+
 header {
     nav {
         // 屬於 nav 寬度 % ;高度 px ;背景色(暫時)
@@ -6,6 +20,8 @@ header {
 
         // 顯示方式：彈性佈局 要排列物的父框架
         display: flex;
+
+        position: unset;
 
         // 呼叫 導覽列內按鈕的寬度設定
         @include LargeNav(6, 4);
@@ -55,6 +71,11 @@ header {
     overflow-x: auto;
     background-color: antiquewhite;
     // 讀取03檔案資料
+
+    // 清除空白區塊
+    margin {
+        top: 0;
+    }
 }
 
 #main {
