@@ -59,39 +59,44 @@
         </ul>
         <!-- 基本輪播圖片 1組為5張圖  -->
         <div id="BannerBox">
+            <!-- 左右按鈕 -->
+            <ul class="Arrow">
+                <li class="Larrow arrow">&lt;</li>
+                <li class="Rarrow arrow">&gt;</li>
+            </ul>
             <!-- 項目清單 ul li 輪播圖片 超小與小裝置 (左右輪播) -->
             <div class="ImgBox">
-                 <!-- html5 新標籤 picture 必要配置標籤 source 和 img (如果所有判斷圖片都讀取不到，就會讀取img上的圖片) 響應式圖片區塊 ；media的判斷，用max-width 最大的寬度設定 -->
-                 <!-- 將 picture 標籤當為一張片，裡面可以寫入不同尺寸的相同圖片；例：輪播圖有5張，須設定5個 picture 標籤，每組標籤內可放入不同尺寸但內容卻相同的圖片 -->
+                <!-- html5 新標籤 picture 必要配置標籤 source 和 img (如果所有判斷圖片都讀取不到，就會讀取img上的圖片) 響應式圖片區塊 ；media的判斷，用max-width 最大的寬度設定 -->
+                <!-- 將 picture 標籤當為一張片，裡面可以寫入不同尺寸的相同圖片；例：輪播圖有5張，須設定5個 picture 標籤，每組標籤內可放入不同尺寸但內容卻相同的圖片 -->
                 <picture class="ImgBox01 SmallImg">
-                        <source srcset="imgs/banner/s/banner01.jpg" media="(max-width: 767px)"> 
-                        <source srcset="imgs/banner/m/banner1.jpg" media="(max-width: 1023px)"> 
-                        <source srcset="imgs/banner/banner01.jpg" media="(min-width: 1024px)">
-                        <img src="imgs/icon/camera.svg" alt="">
+                    <source srcset="imgs/banner/s/banner01.jpg" media="(max-width: 767px)">
+                    <source srcset="imgs/banner/m/banner1.jpg" media="(max-width: 1023px)">
+                    <source srcset="imgs/banner/banner01.jpg" media="(min-width: 1024px)">
+                    <img src="imgs/icon/camera.svg" alt="">
                 </picture>
                 <picture class="ImgBox02 SmallImg">
-                        <source srcset="imgs/banner/s/banner02.jpg" media="(max-width: 767px)">
-                        <source srcset="imgs/banner/m/banner2.jpg" media="(max-width: 1023px)">
-                        <source srcset="imgs/banner/banner02.jpg" media="(min-width: 1024px)">
-                        <img src="imgs/icon/camera.svg" alt="">
+                    <source srcset="imgs/banner/s/banner02.jpg" media="(max-width: 767px)">
+                    <source srcset="imgs/banner/m/banner2.jpg" media="(max-width: 1023px)">
+                    <source srcset="imgs/banner/banner02.jpg" media="(min-width: 1024px)">
+                    <img src="imgs/icon/camera.svg" alt="">
                 </picture>
                 <picture class="ImgBox03 SmallImg">
-                        <source srcset="imgs/banner/s/banner03.jpg" media="(max-width: 767px)"> 
-                        <source srcset="imgs/banner/m/banner3.jpg" media="(max-width: 1023px)">
-                        <source srcset="imgs/banner/banner03.jpg" media="(min-width: 1024px)">
-                        <img src="imgs/icon/camera.svg" alt="">
+                    <source srcset="imgs/banner/s/banner03.jpg" media="(max-width: 767px)">
+                    <source srcset="imgs/banner/m/banner3.jpg" media="(max-width: 1023px)">
+                    <source srcset="imgs/banner/banner03.jpg" media="(min-width: 1024px)">
+                    <img src="imgs/icon/camera.svg" alt="">
                 </picture>
                 <picture class="ImgBox04 SmallImg">
-                        <source srcset="imgs/banner/s/banner04.jpg" media="(max-width: 767px)"> 
-                        <source srcset="imgs/banner/m/banner4.jpg" media="(max-width: 1023px)">
-                        <source srcset="imgs/banner/banner04.jpg" media="(min-width: 1024px)">
-                        <img src="imgs/icon/camera.svg" alt="">
+                    <source srcset="imgs/banner/s/banner04.jpg" media="(max-width: 767px)">
+                    <source srcset="imgs/banner/m/banner4.jpg" media="(max-width: 1023px)">
+                    <source srcset="imgs/banner/banner04.jpg" media="(min-width: 1024px)">
+                    <img src="imgs/icon/camera.svg" alt="">
                 </picture>
                 <picture class="ImgBox05 SmallImg">
-                        <source srcset="imgs/banner/s/banner05.jpg" media="(max-width: 767px)"> 
-                        <source srcset="imgs/banner/m/banner5.jpg" media="(max-width: 1023px)">
-                        <source srcset="imgs/banner/banner05.jpg" media="(min-width: 1024px)">
-                        <img src="imgs/icon/camera.svg" alt="">
+                    <source srcset="imgs/banner/s/banner05.jpg" media="(max-width: 767px)">
+                    <source srcset="imgs/banner/m/banner5.jpg" media="(max-width: 1023px)">
+                    <source srcset="imgs/banner/banner05.jpg" media="(min-width: 1024px)">
+                    <img src="imgs/icon/camera.svg" alt="">
                 </picture>
             </div>
         </div>
@@ -124,17 +129,16 @@
                 <!-- readonly 唯讀，不可以更改內容；由資料庫導入資料時設定，可利用 javascript 判斷式開啟功能 -->
                 <!-- 必填 required；指定最多能輸入多少字 maxlength； 指定最少需要輸入多少字 minlength -->
                 <div id="NameBox">
-                    <li for="UserName">姓名</li>
-                    <input type="text" name="" id="UserName" placeholder="請輸入中文姓名" 
-                    required minlength="3" maxlength="5" >
+                    <li id="UserName">姓名</li>
+                    <input type="text" name="" id="UserName" placeholder="請輸入中文姓名" required minlength="3" maxlength="5">
                 </div>
-                
+
                 <div class="Mail">
                     <label for="E-mail">電子信箱</label>
 
                     <input type="email" name="" id="E-mail" required placeholder="輸入可以接收到的電子信箱">
                 </div>
-                
+
                 <!-- label 沒有換行功能；目前樣式表無法控制 label 標籤，故用 div 作為外框 -->
                 <div class="E-mail2">
                     <label for="E-mail2">
@@ -152,25 +156,25 @@
                 </div>
                 <!-- 詢問問題 -->
                 <div class="Ques">
-                        <p>詢問問題</p>
-                        <!-- 單選鈕 radio 送出資料為同一群組，name的名稱要相同；寫入資料庫的值為 value的內容-->
-                        <li>
-                            <input type="radio" name="Question" value="平面設計">平面設計
-                        </li>
-                        <li>
-                            <input type="radio" name="Question" value="影音設計">影音設計
-                        </li>
-                        <li>
-                            <input type="radio" name="Question" value="網頁設計">網頁設計
-                        </li>
-                        <li>
-                            <input type="radio" name="Question" value="其他合作">其他合作
-                        </li>
+                    <p>詢問問題</p>
+                    <!-- 單選鈕 radio 送出資料為同一群組，name的名稱要相同；寫入資料庫的值為 value的內容-->
+                    <li>
+                        <input type="radio" name="Question" value="平面設計">平面設計
+                    </li>
+                    <li>
+                        <input type="radio" name="Question" value="影音設計">影音設計
+                    </li>
+                    <li>
+                        <input type="radio" name="Question" value="網頁設計">網頁設計
+                    </li>
+                    <li>
+                        <input type="radio" name="Question" value="其他合作">其他合作
+                    </li>
                 </div>
                 <!-- 多行文字 textarea ； placeholder 輸入的提示訊息，輸入資料時會自動消失-->
                 <div class="TextArea">
                     <li><label for="TextArea">詳細內容</label></li>
-                    
+
                     <textarea name="" id="TextArea" cols="30" rows="10" placeholder="請輸入問題內容，限制100個字，最少10個字"></textarea>
                 </div>
                 <!-- 按鈕 -->
