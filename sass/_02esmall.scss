@@ -101,7 +101,7 @@ header {
         position: relative;
 
         // 內間距當為物件高度
-        padding-bottom: 30px;
+        // padding-bottom: 30px;
 
         // 輪播圖左右按鈕
         > .Arrow {
@@ -109,7 +109,7 @@ header {
             // 相對定位
             position: absolute;
             // 層級
-            z-index: 5;
+            z-index: 15;
             // 文字尺寸
             font-size: $Trem * 1.8;
             // 水平置中
@@ -125,24 +125,34 @@ header {
             display: flex;
 
             > .arrow {
-                width: $Wper 0.6;
+                width: $Wper * 0.6;
                 height: 80px;
                 // 圓角矩形
                 border-radius: 20px;
                 background-color: rgba(255, 254, 189, 0.459);
-                // 定位點停佇
+                // 定位點停佇 按鈕永遠停在畫面某區塊上
                 position: fixed;
             }
 
             > .Larrow {
-                // 靠左
+                // 靠左 啟用 定位點停佇
                 left: 10px;
+                // 不啟用 定位點停佇
+                margin-left: 10px;
             }
 
             > .Rarrow {
-                // 靠右
+                // 靠右 啟用 定位點停佇
                 right: 10px;
+                // 不啟用 定位點停佇
+                margin-left: 10px;
             }
+        }
+
+        // 單選鈕
+        > .RadioBox {
+            position: absolute;
+            z-index: 10;
         }
 
         .ImgBox {
@@ -156,6 +166,30 @@ header {
             }
             > .SmallImg:hover {
                 animation-play-state: paused;
+            }
+        }
+
+        // 控制按鈕
+        > .Controls_Visible {
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            bottom: 12px;
+
+            label {
+                // 顯示方式 行內區塊
+                display: inline-block;
+                // 寬度與高度 同數值為正
+                width: 10px;
+                height: 10px;
+                // 物件的左右間距
+                margin: 0 5px; //前:上下 後:左右
+                // 背景顏色
+                background-color: white;
+                // 圓角 正圓
+                border-radius: 50%;
+                // 框線
+                border: 2px solid white;
             }
         }
     }

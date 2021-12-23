@@ -87,6 +87,7 @@ header {
             height: 120px;
         }
 
+        // 偽類別可以任何偽元素上使用
         > .ImgBox:hover {
             // 暫停輪播
             animation-play-state: paused;
