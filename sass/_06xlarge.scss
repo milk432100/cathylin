@@ -45,8 +45,21 @@ header {
         width: $W10;
         // 因為，框架高度會由圖片帶出，所以不用設定高度
         // 超出範圍設定，能滑動x軸，讓圖片在框架中左右滑動
-        overflow-x: auto;
+        overflow: hidden;
         background-color: antiquewhite;
+
+        > .Arrow {
+            line-height: 120px;
+            margin: {
+                top: -60px;
+            }
+
+            > .arrow {
+                width: $Wper * 0.2;
+                height: 120px;
+            }
+        }
+
         .ImgBox {
             // 圖片框的寬度尺寸
             width: $W10 * 5;

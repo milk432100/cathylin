@@ -80,7 +80,7 @@ header {
     #BannerBox {
         width: $W10;
         // 超出範圍設定，能滑動x軸，讓圖片在框架中左右滑動
-        overflow-x: auto;
+        overflow: hidden;
         background-color: antiquewhite;
 
         // 導覽固定在上方，會形成浮動狀態，故廣告區的上方要用 外間距設定為高度
@@ -88,28 +88,57 @@ header {
             top: $NH;
         }
 
+        // 輪播圖左右按鈕
+        > .Arrow {
+            width: $Wper * 10;
+            // 相對定位
+            position: absolute;
+            // 層級
+            z-index: 5;
+            // 文字尺寸
+            font-size: $Trem * 1.8;
+            // 水平置中
+            text-align: center;
+            // 垂直置中
+            line-height: 120px;
+            // 設定為 50% 位置
+            top: 50%;
+            // 外間距
+            margin: {
+                top: -60px;
+            }
+            display: flex;
+
+            > .arrow {
+                width: $Wper 0.6;
+                height: 120px;
+                // 圓角矩形
+                border-radius: 20px;
+                background-color: rgba(255, 254, 189, 0.459);
+                // 定位點停佇
+                position: fixed;
+            }
+
+            > .Larrow {
+                // 靠左
+                left: 10px;
+            }
+
+            > .Rarrow {
+                // 靠右
+                right: 10px;
+            }
+        }
+
         .ImgBox {
             // 圖片框的寬度尺寸
             width: $W10 * 5;
+            // 呼叫動畫 動畫名稱 總秒數 播放次數(無線播放) 反向播放
+            animation: move 25s infinite alternate;
             .SmallImg {
                 width: 100vw;
                 float: left;
             }
-            // .box1 {
-            //     background-color: rgb(231, 163, 201);
-            // }
-            // .box2 {
-            //     background-color: rgb(243, 195, 123);
-            // }
-            // .box3 {
-            //     background-color: rgb(243, 255, 136);
-            // }
-            // .box4 {
-            //     background-color: rgb(130, 255, 136);
-            // }
-            // .box5 {
-            //     background-color: rgb(124, 250, 250);
-            // }
         }
     }
 }

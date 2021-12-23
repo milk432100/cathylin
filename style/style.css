@@ -38,6 +38,51 @@ a:hover {
   font-weight: 500;
 }
 
+@-webkit-keyframes move {
+  0%, 20% {
+    -webkit-transform: translateX(0vw);
+            transform: translateX(0vw);
+  }
+  25%, 40% {
+    -webkit-transform: translateX(-100vw);
+            transform: translateX(-100vw);
+  }
+  45%, 60% {
+    -webkit-transform: translateX(-200vw);
+            transform: translateX(-200vw);
+  }
+  65%, 80% {
+    -webkit-transform: translateX(-300vw);
+            transform: translateX(-300vw);
+  }
+  850%, 100% {
+    -webkit-transform: translateX(-400vw);
+            transform: translateX(-400vw);
+  }
+}
+
+@keyframes move {
+  0%, 20% {
+    -webkit-transform: translateX(0vw);
+            transform: translateX(0vw);
+  }
+  25%, 40% {
+    -webkit-transform: translateX(-100vw);
+            transform: translateX(-100vw);
+  }
+  45%, 60% {
+    -webkit-transform: translateX(-200vw);
+            transform: translateX(-200vw);
+  }
+  65%, 80% {
+    -webkit-transform: translateX(-300vw);
+            transform: translateX(-300vw);
+  }
+  850%, 100% {
+    -webkit-transform: translateX(-400vw);
+            transform: translateX(-400vw);
+  }
+}
 header {
   background-color: beige;
 }
@@ -96,7 +141,7 @@ header nav #contact {
   }
   header #BannerBox {
     width: 100vw;
-    overflow-x: auto;
+    overflow: hidden;
     background-color: antiquewhite;
     margin-top: 65px;
     position: relative;
@@ -120,65 +165,26 @@ header nav #contact {
     height: 80px;
     border-radius: 20px;
     background-color: rgba(255, 254, 189, 0.459);
+    position: fixed;
   }
   header #BannerBox > .Arrow > .Larrow {
-    margin-left: 10px;
+    left: 10px;
   }
   header #BannerBox > .Arrow > .Rarrow {
-    margin-right: 10px;
+    right: 10px;
   }
   header #BannerBox .ImgBox {
     width: 500vw;
-    -webkit-animation: move 25s infinite;
-            animation: move 25s infinite;
+    -webkit-animation: move 25s infinite alternate;
+            animation: move 25s infinite alternate;
   }
   header #BannerBox .ImgBox .SmallImg {
     width: 100vw;
     float: left;
   }
-  @-webkit-keyframes move {
-    0%, 20% {
-      -webkit-transform: translateX(0vw);
-              transform: translateX(0vw);
-    }
-    25%, 40% {
-      -webkit-transform: translateX(-100vw);
-              transform: translateX(-100vw);
-    }
-    45%, 60% {
-      -webkit-transform: translateX(-200vw);
-              transform: translateX(-200vw);
-    }
-    65%, 80% {
-      -webkit-transform: translateX(-300vw);
-              transform: translateX(-300vw);
-    }
-    85%, 100% {
-      -webkit-transform: translateX(-400vw);
-              transform: translateX(-400vw);
-    }
-  }
-  @keyframes move {
-    0%, 20% {
-      -webkit-transform: translateX(0vw);
-              transform: translateX(0vw);
-    }
-    25%, 40% {
-      -webkit-transform: translateX(-100vw);
-              transform: translateX(-100vw);
-    }
-    45%, 60% {
-      -webkit-transform: translateX(-200vw);
-              transform: translateX(-200vw);
-    }
-    65%, 80% {
-      -webkit-transform: translateX(-300vw);
-              transform: translateX(-300vw);
-    }
-    85%, 100% {
-      -webkit-transform: translateX(-400vw);
-              transform: translateX(-400vw);
-    }
+  header #BannerBox .ImgBox > .SmallImg:hover {
+    -webkit-animation-play-state: paused;
+            animation-play-state: paused;
   }
 
   footer .HRLine {
@@ -410,12 +416,40 @@ header nav #contact {
   }
   header #BannerBox {
     width: 100vw;
-    overflow-x: auto;
+    overflow: hidden;
     background-color: antiquewhite;
     margin-top: 65px;
   }
+  header #BannerBox > .Arrow {
+    width: 100%;
+    position: absolute;
+    z-index: 5;
+    font-size: 1.8rem;
+    text-align: center;
+    line-height: 120px;
+    top: 50%;
+    margin-top: -60px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  header #BannerBox > .Arrow > .arrow {
+    width: 10% 0.6;
+    height: 120px;
+    border-radius: 20px;
+    background-color: rgba(255, 254, 189, 0.459);
+    position: fixed;
+  }
+  header #BannerBox > .Arrow > .Larrow {
+    left: 10px;
+  }
+  header #BannerBox > .Arrow > .Rarrow {
+    right: 10px;
+  }
   header #BannerBox .ImgBox {
     width: 500vw;
+    -webkit-animation: move 25s infinite alternate;
+            animation: move 25s infinite alternate;
   }
   header #BannerBox .ImgBox .SmallImg {
     width: 100vw;
@@ -617,10 +651,12 @@ header nav #project,
 header nav #contact {
     display: none;
   }
-  header #BannerBox {
-    width: 100vw;
-    overflow-x: auto;
-    background-color: antiquewhite;
+  header #BannerBox > .Arrow {
+    line-height: 140px;
+    margin-top: -70px;
+  }
+  header #BannerBox > .Arrow > .arrow {
+    height: 140px;
   }
 }
 @media screen and (min-width: 992px) {
@@ -674,11 +710,23 @@ header nav #contact {
 
   #BannerBox {
     width: 100vw;
-    overflow-x: auto;
+    overflow: hidden;
     background-color: antiquewhite;
   }
   #BannerBox margin {
     top: 0;
+  }
+  #BannerBox > .Arrow {
+    line-height: 120px;
+    margin-top: -60px;
+  }
+  #BannerBox > .Arrow > .arrow {
+    width: 2.5%;
+    height: 120px;
+  }
+  #BannerBox > .Arrow > .ImgBox:hover {
+    -webkit-animation-play-state: paused;
+            animation-play-state: paused;
   }
 
   footer .HRLine {
@@ -775,8 +823,16 @@ header nav #contact {
   }
   header #BannerBox {
     width: 100vw;
-    overflow-x: auto;
+    overflow: hidden;
     background-color: antiquewhite;
+  }
+  header #BannerBox > .Arrow {
+    line-height: 120px;
+    margin-top: -60px;
+  }
+  header #BannerBox > .Arrow > .arrow {
+    width: 2%;
+    height: 120px;
   }
   header #BannerBox .ImgBox {
     width: 500vw;

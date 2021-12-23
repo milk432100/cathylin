@@ -44,6 +44,31 @@ a:hover {
     // 文字加粗
     font-weight: 500;
 }
+
+// 動畫 1.設定關鍵影格 2.呼叫動畫
+@keyframes move {
+    0%,
+    20% {
+        transform: translateX(0vw);
+    }
+    25%,
+    40% {
+        transform: translateX(-100vw);
+    }
+    45%,
+    60% {
+        transform: translateX(-200vw);
+    }
+    65%,
+    80% {
+        transform: translateX(-300vw);
+    }
+    850%,
+    100% {
+        transform: translateX(-400vw);
+    }
+}
+
 // 變數區
 $W10: 100vw;
 $Tpx: 16px; // 設定文字尺寸的基礎值 單位 16px (固定值)

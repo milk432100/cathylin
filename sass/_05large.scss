@@ -68,7 +68,7 @@ header {
 #BannerBox {
     width: $W10;
     // 超出範圍設定，能滑動x軸，讓圖片在框架中左右滑動
-    overflow-x: auto;
+    overflow: hidden;
     background-color: antiquewhite;
     // 讀取03檔案資料
 
@@ -76,17 +76,22 @@ header {
     margin {
         top: 0;
     }
-}
+    > .Arrow {
+        line-height: 120px;
+        margin: {
+            top: -60px;
+        }
 
-#main {
-    // article {
-    //     width: $W10;
-    //     height: 650px;
-    //     // 框線 線段粗細 線段樣式 線段顏色
-    //     border-bottom-width: 2px;
-    //     border-bottom-style: solid;
-    //     border-bottom-color: tomato;
-    // }
+        > .arrow {
+            width: $Wper * 0.25;
+            height: 120px;
+        }
+
+        > .ImgBox:hover {
+            // 暫停輪播
+            animation-play-state: paused;
+        }
+    }
 }
 
 footer {
