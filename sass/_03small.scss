@@ -130,14 +130,108 @@ header {
             }
         }
 
-        .ImgBox {
-            // 圖片框的寬度尺寸
-            width: $W10 * 5;
-            // 呼叫動畫 動畫名稱 總秒數 播放次數(無線播放) 反向播放
-            animation: move 25s infinite alternate;
-            .SmallImg {
-                width: 100vw;
-                float: left;
+        // 輪播區 按鈕
+        > .RadioBox {
+            width: $Wper * 10;
+
+            > input {
+                @include Dn;
+            }
+
+            // 控制按鈕
+            > .Controls_Visible {
+                width: $Wper * 10;
+                position: absolute;
+                text-align: center;
+                bottom: 12px;
+
+                label {
+                    // 顯示方式 行內區塊
+                    display: inline-block;
+                    // 寬度與高度 同數值為正
+                    width: 10px;
+                    height: 10px;
+                    // 物件的左右間距
+                    margin: 0 5px; //前:上下 後:左右
+                    // 背景顏色
+                    background-color: white;
+                    // 圓角 正圓
+                    border-radius: 50%;
+                    // 框線
+                    border: 2px solid white;
+                }
+            }
+
+            // 轉換控制按鈕顏色 偽類別控制 "~" 連結同層元素，形成連動  5張圖片要五份
+            > input[type="radio"]:nth-of-type(1):checked
+                ~ .Controls_Visible
+                label:nth-of-type(1) {
+                background-color: rgb(217, 255, 127);
+            }
+            > input[type="radio"]:nth-of-type(2):checked
+                ~ .Controls_Visible
+                label:nth-of-type(2) {
+                background-color: rgb(217, 255, 127);
+            }
+            > input[type="radio"]:nth-of-type(3):checked
+                ~ .Controls_Visible
+                label:nth-of-type(3) {
+                background-color: rgb(217, 255, 127);
+            }
+            > input[type="radio"]:nth-of-type(4):checked
+                ~ .Controls_Visible
+                label:nth-of-type(4) {
+                background-color: rgb(217, 255, 127);
+            }
+            > input[type="radio"]:nth-of-type(5):checked
+                ~ .Controls_Visible
+                label:nth-of-type(5) {
+                background-color: rgb(217, 255, 127);
+            }
+
+            > input[type="radio"]:nth-of-type(1):checked
+                ~ .ImgBox
+                > a
+                > .SmallImg {
+                transform: translateX(0vw);
+            }
+            > input[type="radio"]:nth-of-type(2):checked
+                ~ .ImgBox
+                > a
+                > .SmallImg {
+                transform: translateX(-100vw);
+            }
+            > input[type="radio"]:nth-of-type(3):checked
+                ~ .ImgBox
+                > a
+                > .SmallImg {
+                transform: translateX(-200vw);
+            }
+            > input[type="radio"]:nth-of-type(4):checked
+                ~ .ImgBox
+                > a
+                > .SmallImg {
+                transform: translateX(-300vw);
+            }
+            > input[type="radio"]:nth-of-type(5):checked
+                ~ .ImgBox
+                > a
+                > .SmallImg {
+                transform: translateX(-400vw);
+            }
+
+            > .ImgBox {
+                // 圖片框的寬度尺寸
+                width: $W10 * 5;
+                // 呼叫動畫 動畫名稱 總秒數 播放次數(無線播放) 反向播放
+                animation: move 25s infinite alternate;
+                .SmallImg {
+                    width: 100vw;
+                    float: left;
+                }
+                > .SmallImg:hover {
+                    animation-play-state: paused;
+                }
             }
         }
     }
