@@ -100,3 +100,17 @@ console.log("z=", z);
 // var 的全域與區域的作用，只存在function (函數)之內
 // {區塊敘述} if、else、for、while
 // 判斷是 if {} else {}
+
+document.getElementById('TestBox').textContent="1234";
+
+// 確認對話框 '提示訊息'
+// window.confirm('繼續請按確定，退出請按取消');
+
+// 條件分之 if(條件){成立時執行的動作}else{不成立時執行的動作}
+// 如果沒有 不成立 時要執行的動作，可以省略 else 不寫
+if(window.confirm('繼續請按確定，退出請按取消')) {
+    // 控制台訊息
+    console.log('確定');
+}else {
+    console.log('已取消');
+}
