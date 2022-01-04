@@ -135,21 +135,51 @@ let TestName = document.getElementById('TestBox');
 
 // 全域變數須設定在方法之上，不然會呼叫不到
 
-// 呼叫方法
+// 呼叫方法  方法可以再呼叫之下或之下撰寫
 login();
+
 
 // 方法
 function login() {
-    let Ans = window.prompt('請輸入帳號');
 
-    if( Ans == '1234') {
-        console.log(Ans);
+    // 區域變數
+    let Ans = window.prompt('請輸入帳號');
+    let Number;
+
+    if( Ans == 'cathy') {
+        // console.log(Ans);
+        Number = window.prompt('請輸入密碼');
+
+        if( Number == '12345') {                            //巢狀函式寫法 如果Ans的條件成立 就會進到第二層判斷 
+            TestName.textContent="歡迎進入系統";             //            如果Ans的條件不成立 會直接略過第二層判斷
+        }
+
     } else {
         Ans = "帳號密碼輸入錯誤！"
-        console.log(Ans);
+        // console.log(Ans);
+        TestName.textContent = Ans;
     }
 }
 
+// 按照時間顯示不同訊息
+function TimeItem() {
+
+    // 區域變數 時間(時)
+    let hour = new Date().getHours();
+
+    // 判斷式 1.早上 9點 和 (或 ||) 下午 3點，顯示 現在買 1 送 1 喔！； 一個條件成立即可
+    // 2. 晚上 7點 之後到 晚上 9點前(和 &&)，顯示 所有商品 7 折，特價品除外；兩個條件要同時成立
+    // 3. 其他時間顯示 歡迎團購商品！；除了上述條件之外，都會成立
+    // 多條件判斷式 if (條件){成立} else if(條件){成立} else{上述條件都不成立}
+
+    if (hour == 9 || hour == 15) {
+        TestName.textContent = "現在買 1 送 1 喔！"
+    } else if (hour >=19 && hour <21) {
+        TestName.textContent = "所有商品 7 折，特價品除外"
+    } else {
+        TestName.textContent = "歡迎團購商品！"
+    }
+}
 
 
 
