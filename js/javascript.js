@@ -97,6 +97,7 @@ let x=2, Y=0;
 console.log("c=", c);
 console.log("z=", z);
 
+
 // var 的全域與區域的作用，只存在function (函數)之內
 // {區塊敘述} if、else、for、while
 // 判斷是 if {} else {}
@@ -108,9 +109,42 @@ document.getElementById('TestBox').textContent="1234";
 
 // 條件分之 if(條件){成立時執行的動作}else{不成立時執行的動作}
 // 如果沒有 不成立 時要執行的動作，可以省略 else 不寫
-if(window.confirm('繼續請按確定，退出請按取消')) {
-    // 控制台訊息
-    console.log('確定');
-}else {
-    console.log('已取消');
+// 方法
+function WinCon() {
+    if(window.confirm('繼續請按確定，退出請按取消')) {
+        // 控制台訊息
+        console.log('確定');
+        document.getElementById('TestBox').textContent = "確定";
+    }else {
+        console.log('已取消');
+        document.getElementById('TestBox').textContent = "已取消";
+    }
 }
+
+
+// 輸入對話框 window.prompt('提示訊息')
+
+// window.prompt('請輸入資料');
+
+// 帳密登入邏輯
+// 1.設定變數，只依靠window.prompt的一個輸入框，故只設定一個變數即可
+// 2.判斷式 變數值 與 輸入值 比對(==)；相同才會顯示資料；比對(==)，只要輸的資料相同即通過
+
+
+// 呼叫方法
+login();
+// 方法
+function login() {
+    let Ans = window.prompt('請輸入帳號');
+
+    if( Ans == '1234') {
+        console.log(Ans);
+    } else {
+        Ans = "帳號密碼輸入錯誤！"
+        console.log(Ans);
+    }
+}
+
+
+
+
