@@ -234,10 +234,11 @@ function WhileCode() {
 // if ( ackk > 30 )
 //     console.log(ackk);
 
+ArrayCode()
 // 陣列 ['資料','資料']；利用索引編號找值；陣列第一筆資料編號永遠為 0 (除非重新設定)
 function ArrayCode(){
-    let Items = ['01',01];
-    for (let i = 0; i < 2; i++ ) {
+    let Items = ['01',01,'項目'];
+    for (let i = 0; i < Items.length; i++ ) {
         console.log(Items[i]);
     }
 }
