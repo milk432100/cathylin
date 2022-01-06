@@ -1,3 +1,4 @@
+function testcode () {
 document.write("javascript!");
 
 // 資料型別(原生)：數值(number)、字串(string)、布林(boolean)、未定義(undefined)、空值(null)
@@ -80,7 +81,7 @@ function cal() {
     // 連續宣告變數
     // a = 5, B; 宣告變數給予值時，可以不用 var定義；宣告變數不予值時，需要用 var 定義才會成立
     a = 5, b = 1;//全域變數
-    document.write("<br> a+b =" +  (a+B));
+    document.write("<br> a+b =" +  (a+b));
 }
 cal();
 document.write("<br>" + a);
@@ -88,10 +89,10 @@ document.write("<br>" + a);
 // let 宣告的作用域 會因 {區塊敘述} 而分別定義為 全域或區域 的型態
 
 var a=5, b=0;
-let x=2, Y=0;
+let A=2, Y=0;
 {
     var c= a+b;
-    let z= x+Y;
+    let z= A+Y;
 }
 // 測試可用 控制台 呼叫
 console.log("c=", c);
@@ -100,7 +101,7 @@ console.log("z=", z);
 
 // var 的全域與區域的作用，只存在function (函數)之內
 // {區塊敘述} if、else、for、while
-// 判斷是 if {} else {}
+// 判斷式 if {} else {}
 
 document.getElementById('TestBox').textContent="1234";
 
@@ -138,7 +139,6 @@ let TestName = document.getElementById('TestBox');
 // 呼叫方法  方法可以再呼叫之下或之下撰寫
 login();
 
-
 // 方法
 function login() {
 
@@ -160,7 +160,8 @@ function login() {
         TestName.textContent = Ans;
     }
 }
-
+};
+// TimeItem();
 // 按照時間顯示不同訊息
 function TimeItem() {
 
@@ -173,13 +174,70 @@ function TimeItem() {
     // 多條件判斷式 if (條件){成立} else if(條件){成立} else{上述條件都不成立}
 
     if (hour == 9 || hour == 15) {
-        TestName.textContent = "現在買 1 送 1 喔！"
+        TestName.textContent = "現在買 1 送 1 喔！";
     } else if (hour >=19 && hour <21) {
-        TestName.textContent = "所有商品 7 折，特價品除外"
+        TestName.textContent = "所有商品 7 折，特價品除外";
     } else {
-        TestName.textContent = "歡迎團購商品！"
+        TestName.textContent = "歡迎團購商品！";
     }
 }
 
+ForCode();
+// 迴圈 for (迴圈條件){語法}
+// i = i + 1 原始寫法 i++ ; ++ 加法運算子 數字 + 數字; -- 減法運算子 數字 - 數字
+function ForCode() {
+    let i;
+    for ( i = 1; i <= 10; i++ ) {
+        console.log(i);
+    }
 
+    let q;
+    for ( q = 10; q > 0 ; q-- ) {
+        console.log(q);
+    }
+}
 
+//迴圈 while(條件){執行程式}
+WhileCode();
+function WhileCode() {
+    // 設總數
+    let Number = 100;
+    // 亂數(系統產生的亂數，會介於 0 ~ 1 之間)； 每次亂數都要大於 30 小於 40
+    // 亂數求整數值時，需乘以 奇數
+    let attack;
+    while ( Number > 0 ) {
+        // 產生亂數 Math.random() -- 0 ~ 1
+        attack = Math.floor(Math.random() * 41);
+        console.log('亂數值：'+ attack);
+
+        
+        if ( attack > 30 )
+        Number = Number - attack;
+
+        // 小於 0 Number = 0
+        if (Number < 0)
+            Number = 0;
+
+        console.log('計算結果：'+ Number);
+    }
+}
+
+// let ac = Math.random(); 
+// console.log(ac);
+
+// let ack = Math.random() * 41; 
+// console.log(ack);
+
+// let ackk = Math.floor(Math.random() * 41); 
+// console.log(ackk);
+
+// if ( ackk > 30 )
+//     console.log(ackk);
+
+// 陣列 ['資料','資料']；利用索引編號找值；陣列第一筆資料編號永遠為 0 (除非重新設定)
+function ArrayCode(){
+    let Items = ['01',01];
+    for (let i = 0; i < 2; i++ ) {
+        console.log(Items[i]);
+    }
+}
