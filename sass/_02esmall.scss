@@ -314,6 +314,10 @@ footer {
 }
 
 #main {
+    > #portfoliobox {
+        font-size: $Trem * 1.1;
+    }
+
     #contactbox {
         background-image: url(../../imgs/bg/back_002.gif);
 

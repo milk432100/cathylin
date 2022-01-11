@@ -301,6 +301,9 @@ header nav #contact {
     font-weight: 700;
   }
 
+  #main > #portfoliobox {
+    font-size: 1.1rem;
+  }
   #main #contactbox {
     background-image: url(../../imgs/bg/back_002.gif);
   }

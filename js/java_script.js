@@ -1,30 +1,30 @@
-document.getElementById('ProjectContent').textContent="測試文字";
+AddArticle();
 
-let Items =['Item01','Item02','Item03'];
+function AddArticle(){
+    // 呼叫主要的 article id=main
+    let Main = document.getElementById("main");
 
-for (let i = 0; i < Items.length; i++) {
+    // 新增 article
+    let art = document.createElement("article");
 
-    // 在 html 內新增標籤 li
-    let liName = document.createElement('li');
+    // 新增 artilce 的屬性 setAttribute("id or class"，"自訂名稱") id
+    art.setAttribute("id", "portfolio");
 
-    // 陣列內的資料，置入 li 之內
-    li.textContent = Items[i];
+    // innerHTML 可寫入純文字，還可以寫入 html 的標籤
+    art.innerHTML = "在 Por 元素的開頭";
 
-    // 在哪個 html 標籤內，產生 li 清單物件
-    let Div = document.getElementById('ProjectContent');
     // 取得 html 標籤(元素)中添加的子元素
-    Div.appendChild(liName);
+    Main.appendChild(art);
+
+    // 1. 在被選取的元素結尾插入內容 append() 置入被選取元素之中
+
+    // 2. 在被選取的元素開頭插入內容 prepend() 置入被選取元素之中
+
+    // 3. 在被選取的元素之後插入內容 after() 置入被選取元素標籤之前
+    
+    // 4. 在被選取的元素之前插入內容 before() 置入被選取元素標籤之後
+
+    let Por = document.getElementById("portfoliobox");
+
+    Por.before(art);
 }
-
-// 變數 可變更值
-let a = 3.14;
-console.log(a);
-a = 2;
-console.log(a);
-
-// 常數 無法變更值
-const pi = 3.14;
-
-console.log(pi);
-pi = 2;
-console.log(pi);
