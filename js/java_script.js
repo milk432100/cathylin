@@ -1,4 +1,29 @@
+// AddArticle();
 AddArticle();
+
+function AddArticles() {
+    // 陣列 id
+    let ArtId = ['portfoliobox','aboutbox','projectbox'];
+
+    // 主要的 article id=main
+    let Main = document.getElementById("main");
+
+    // 產出 3 個標籤
+    for ( let i = 0; i < ArtId.length; i++) {
+        // 要新增的標籤 article
+        let art = document.createElement("article");
+
+        // 新增 article 的 id
+        art.setAttribute("id", ArtId[i]); 
+
+        // 在框架內新增子元素 main > article
+        Main.appendChild(art);
+
+        // 標籤要在 #contactbox 之上
+        let Con = document.getElementById("contactbox");
+        Con.before(art);
+    }
+};
 
 function AddArticle(){
     // 呼叫主要的 article id=main
@@ -11,7 +36,14 @@ function AddArticle(){
     art.setAttribute("id", "portfoliobox");
 
     // innerHTML 可寫入純文字，還可以寫入 html 的標籤
-    art.innerHTML = "<hi>在 Por 元素的開頭</hi>";
+    // art.innerHTML = "<h1>在 Por 元素的開頭</h1>";
+
+    // 在 article 新增 h1
+    let h1 = document.createElement('h1');
+
+    h1.textContent = "作品分享";
+
+    art.appendChild(h1);
 
     // 取得 html 標籤(元素)中添加的子元素
     Main.appendChild(art);
@@ -27,4 +59,4 @@ function AddArticle(){
     let Con = document.getElementById("contactbox");
 
     Con.before(art);
-}
+};
