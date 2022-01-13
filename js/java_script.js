@@ -1,6 +1,5 @@
 // AddArticle();
 AddArticle();
-
 function AddArticles() {
     // 陣列 id
     let ArtId = ['portfoliobox','aboutbox','projectbox'];
@@ -24,6 +23,21 @@ function AddArticles() {
         Con.before(art);
     }
 };
+
+// JQuery 語法
+// 行動裝置選單按鈕，開啟與關閉
+// 1.隱藏 MobileNav 區塊
+$('#mobilenav').hide();
+
+// 2. 點擊按鈕 Menu 開啟 mobilenav 區塊
+$('#menu').click( function() {
+ $('#mobilenav').show();
+});
+
+// 3. 點擊 close 關閉 mobilenav 區塊
+$('.close').click( function() {
+    $('#mobilenav').hide();
+   });
 
 function AddArticle(){
     // 呼叫主要的 article id=main

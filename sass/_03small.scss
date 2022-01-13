@@ -10,9 +10,10 @@ header {
         // 停駐在畫面上方，不隨著畫面滑動而消失
         position: fixed;
         top: 0;
-
         // height: $NH;
-        // background-color: yellow;
+        background-color: rgb(255, 255, 210);
+        // 設定階層
+        z-index: 999;
 
         // 指向清單物件 li
         li {
@@ -70,9 +71,39 @@ header {
         height: 100vh;
         // 定位點 絕對定位 設定階層
         position: absolute;
-        z-index: 5;
-        display: none;
+        z-index: 9999;
+        //停佇
+        position: fixed;
+        // display: none;
+        color: white;
+        // 溢位
+        overflow: hidden;
+        top: 0;
         background-color: rgb(245, 196, 187);
+
+        > li {
+            width: $Wper * 7.5;
+            margin: {
+                top: 35px;
+            }
+
+            > a {
+                color: white;
+                font-size: $Trem * 1.5;
+            }
+        }
+        > .close {
+            width: $Wper * 1.5;
+            font-size: $Trem * 1.3;
+            color: rgba(243, 97, 0, 0.863);
+            font-weight: 600;
+            text-align: right;
+            margin-right: $Wper * 0.8;
+            // background-color: rgb(15, 127, 202);
+        }
+        > .Mlogo {
+            font-size: $Trem * 1.5;
+        }
     }
 
     // 輪播圖片 超小與小裝置 100% 寬 * 280px 高 (圖片以大尺寸 1920*600 為基礎計算)
@@ -116,17 +147,19 @@ header {
                 border-radius: 20px;
                 background-color: rgba(255, 254, 189, 0.459);
                 // 定位點停佇
-                position: fixed;
+                // position: fixed;
             }
 
             > .Larrow {
                 // 靠左
                 left: 10px;
+                margin-left: 12px;
             }
 
             > .Rarrow {
                 // 靠右
                 right: 10px;
+                margin-right: 12px;
             }
         }
 

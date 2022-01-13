@@ -100,6 +100,7 @@ header {
 
   header nav {
     width: 100vw;
+    height: 65px;
     position: fixed;
     top: 0;
     z-index: 999;
@@ -114,6 +115,7 @@ header {
     font-family: Arial, Helvetica, sans-serif;
     text-indent: 20px;
     line-height: 65px;
+    background-color: bisque;
   }
   header nav #menu {
     width: 15vw;
@@ -136,8 +138,30 @@ header nav #contact {
     height: 100vh;
     position: absolute;
     z-index: 9999;
-    display: none;
-    background-color: rgba(255, 238, 163, 0.897);
+    position: fixed;
+    color: white;
+    overflow: hidden;
+    top: 0;
+    background-color: #ffeea3;
+  }
+  header #mobilenav > li {
+    width: 85%;
+    margin-top: 35px;
+  }
+  header #mobilenav > li > a {
+    color: white;
+    font-size: 1.7rem;
+  }
+  header #mobilenav > .close {
+    width: 17%;
+    font-size: 1.5rem;
+    color: rgba(243, 97, 0, 0.863);
+    font-weight: 600;
+    text-align: right;
+    margin-right: 8%;
+  }
+  header #mobilenav > .Mlogo {
+    font-size: 1.7rem;
   }
   header #BannerBox {
     width: 100vw;
@@ -164,15 +188,14 @@ header nav #contact {
     height: 80px;
     border-radius: 20px;
     background-color: rgba(255, 254, 189, 0.459);
-    position: fixed;
   }
   header #BannerBox > .Arrow > .Larrow {
     left: 10px;
-    margin-left: 10px;
+    margin-left: 12px;
   }
   header #BannerBox > .Arrow > .Rarrow {
     right: 10px;
-    margin-left: 10px;
+    margin-right: 12px;
   }
   header #BannerBox > .RadioBox {
     width: 100%;
@@ -245,6 +268,7 @@ header nav #contact {
   }
 
   footer .HRLine {
+    margin-top: 15px;
     margin-bottom: 15px;
   }
   footer nav {
@@ -435,6 +459,8 @@ header nav #contact {
     width: 100vw;
     position: fixed;
     top: 0;
+    background-color: #ffffd2;
+    z-index: 999;
   }
   header nav li {
     float: left;
@@ -470,9 +496,31 @@ header nav #contact {
     width: 100vw;
     height: 100vh;
     position: absolute;
-    z-index: 5;
-    display: none;
+    z-index: 9999;
+    position: fixed;
+    color: white;
+    overflow: hidden;
+    top: 0;
     background-color: #f5c4bb;
+  }
+  header #mobilenav > li {
+    width: 75%;
+    margin-top: 35px;
+  }
+  header #mobilenav > li > a {
+    color: white;
+    font-size: 1.5rem;
+  }
+  header #mobilenav > .close {
+    width: 15%;
+    font-size: 1.3rem;
+    color: rgba(243, 97, 0, 0.863);
+    font-weight: 600;
+    text-align: right;
+    margin-right: 8%;
+  }
+  header #mobilenav > .Mlogo {
+    font-size: 1.5rem;
   }
   header #BannerBox {
     width: 100vw;
@@ -498,13 +546,14 @@ header nav #contact {
     height: 120px;
     border-radius: 20px;
     background-color: rgba(255, 254, 189, 0.459);
-    position: fixed;
   }
   header #BannerBox > .Arrow > .Larrow {
     left: 10px;
+    margin-left: 12px;
   }
   header #BannerBox > .Arrow > .Rarrow {
     right: 10px;
+    margin-right: 12px;
   }
   header #BannerBox > .RadioBox {
     width: 100%;

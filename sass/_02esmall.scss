@@ -11,7 +11,7 @@ header {
         // 屬於 nav 寬度 % ;高度 px ;背景色(暫時)
         width: $NW;
         // 設定手機版的導覽列 62行，定位點語法與階層語法，被 nav 的高設定給抵消，所以才隱藏 nav 的高度
-        // height: $NH;
+        height: $NH;
 
         // 停駐在畫面上方，不隨著畫面滑動而消失
         position: fixed;
@@ -39,7 +39,7 @@ header {
             text-indent: 20px;
             // 文字水平置中，行距設定(父框架的高度 = 行距的數值)  line-height: 80* 0.15 + px;
             line-height: $NH;
-            // background-color: bisque;
+            background-color: bisque;
             //對齊方式 置中
             // text-align: center;
         }
@@ -57,7 +57,7 @@ header {
         }
 
         // .clear {
-        //     clear: both;
+        // clear: both;
         // }
 
         // 導覽列：只顯示Logo 和 Menu，其餘不顯示
@@ -79,8 +79,38 @@ header {
         // 定位點 絕對定位 設定階層
         position: absolute;
         z-index: 9999;
-        display: none;
-        background-color: rgba(255, 238, 163, 0.897);
+        //停佇
+        position: fixed;
+        // display: none;
+        color: white;
+        // 溢位
+        overflow: hidden;
+        top: 0;
+        background-color: rgb(255, 238, 163);
+
+        > li {
+            width: $Wper * 8.5;
+            // 外間距
+            margin: {
+                top: 35px;
+            }
+            > a {
+                color: white;
+                font-size: $Trem * 1.7;
+            }
+        }
+        > .close {
+            width: $Wper * 1.7;
+            font-size: $Trem * 1.5;
+            color: rgba(243, 97, 0, 0.863);
+            font-weight: 600;
+            text-align: right;
+            margin-right: $Wper * 0.8;
+            // background-color: rgb(15, 127, 202);
+        }
+        > .Mlogo {
+            font-size: $Trem * 1.7;
+        }
     }
 
     // 輪播圖片 超小與小裝置 100% 寬 * 280px 高 (圖片以大尺寸 1920*600 為基礎計算)
@@ -131,21 +161,21 @@ header {
                 border-radius: 20px;
                 background-color: rgba(255, 254, 189, 0.459);
                 // 定位點停佇 按鈕永遠停在畫面某區塊上
-                position: fixed;
+                // position: fixed;
             }
 
             > .Larrow {
                 // 靠左 啟用 定位點停佇
                 left: 10px;
                 // 不啟用 定位點停佇
-                margin-left: 10px;
+                margin-left: 12px;
             }
 
             > .Rarrow {
                 // 靠右 啟用 定位點停佇
                 right: 10px;
                 // 不啟用 定位點停佇
-                margin-left: 10px;
+                margin-right: 12px;
             }
         }
 
@@ -261,7 +291,7 @@ footer {
         // 上邊界與下邊界，讓 main 與 footer 有點區隔
         margin: {
             // 減少空白
-            // top: 15px;
+            top: 15px;
             bottom: 15px;
         }
     }
