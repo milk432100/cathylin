@@ -255,8 +255,6 @@ header nav #contact {
   }
   header #BannerBox > .RadioBox > .ImgBox {
     width: 500vw;
-    -webkit-animation: move 25s infinite alternate;
-            animation: move 25s infinite alternate;
   }
   header #BannerBox > .RadioBox > .ImgBox .SmallImg {
     width: 100vw;
@@ -613,8 +611,6 @@ header nav #contact {
   }
   header #BannerBox > .RadioBox > .ImgBox {
     width: 500vw;
-    -webkit-animation: move 25s infinite alternate;
-            animation: move 25s infinite alternate;
   }
   header #BannerBox > .RadioBox > .ImgBox .SmallImg {
     width: 100vw;

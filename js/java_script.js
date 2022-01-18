@@ -1,6 +1,6 @@
-// AddArticle();
-AddArticles();
-function AddArticles() {
+// 迴圈 寫入html 畫面
+AddArticle();
+function AddArticle() {
     // 陣列 id
     let ArtId = ['portfoliobox','aboutbox','projectbox'];
     let ArtH1 = ['portfoliotitle','abouttitle','projecttitle'];
@@ -54,38 +54,29 @@ $('.close').click( function() {
     $('#mobilenav').hide();
    });
 
-function AddArticle(){
-    // 呼叫主要的 article id=main
-    let Main = document.getElementById("main");
+TopBtn();
+// 控制 Top 按鈕
+function TopBtn() {
+    // 宣告變數 指向 Top 之下 a 標籤
+    let Top = $('#Top');
+    let Topa = $('#Top > a');
+    // 隱藏按鈕
+    Top.hide();
 
-    // 新增 article
-    let art = document.createElement("article");
+    // 設應按鈕行為
+    Topa.click( function() {
+        //　執行的動畫：當點擊按鈕時，畫面捲動到同頁最上方，加上滑動的秒數。
+        $('html, body').animate({scrollTop:0}, 0.333);
+    });
 
-    // 新增 artilce 的屬性 setAttribute("id or class"，"自訂名稱") id
-    art.setAttribute("id", "portfoliobox");
-
-    // innerHTML 可寫入純文字，還可以寫入 html 的標籤
-    // art.innerHTML = "<h1>在 Por 元素的開頭</h1>";
-
-    // 在 article 新增 h1
-    let h1 = document.createElement('h1');
-
-    h1.textContent = "作品分享";
-
-    art.appendChild(h1);
-
-    // 取得 html 標籤(元素)中添加的子元素
-    Main.appendChild(art);
-
-    // 1. 在被選取的元素開頭插入內容 prepend() 置入被選取元素之中
-
-    // 2. 在被選取的元素結尾插入內容 append() 置入被選取元素之中
-
-    // 3. 在被選取的元素之後插入內容 before() 置入被選取元素標籤之前
-    
-    // 4. 在被選取的元素之前插入內容 after() 置入被選取元素標籤之後
-
-    let Con = document.getElementById("contactbox");
-
-    Con.before(art);
-};
+    // 畫面高度 大於 300px ，按鈕會出現；低於300px 按鈕會隱藏
+    $(window).scroll(function () {
+        if ( $(this).scrollTop() > 300 ) {
+            // 淡入
+            Top.fadeIn(222);
+        } else {
+            // 先停止之前的動畫再淡出
+            Top.stop().fadeOut(222);
+        }
+    });
+}

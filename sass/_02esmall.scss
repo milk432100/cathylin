@@ -273,7 +273,7 @@ header {
                 // 圖片框的寬度尺寸
                 width: $W10 * 5;
                 // 呼叫動畫 動畫名稱 總秒數 播放次數(無線播放) 反向播放
-                animation: move 25s infinite alternate;
+                // animation: move 25s infinite alternate;
                 .SmallImg {
                     width: 100vw;
                     float: left;
