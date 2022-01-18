@@ -3,6 +3,10 @@ AddArticle();
 function AddArticles() {
     // 陣列 id
     let ArtId = ['portfoliobox','aboutbox','projectbox'];
+    let ArtH1 = ['portfoliotitle','abouttitle','projecttitle'];
+    let ArtH1Con = ['作品分享','關於峯瑩','專案項目'];
+    let ArtH1PorDiv = ['MGraphic','MAudio','MWeb'];
+    let ArtH1PorDivH1 = ['平面作品','影音作品','網頁作品'];
 
     // 主要的 article id=main
     let Main = document.getElementById("main");
@@ -11,16 +15,34 @@ function AddArticles() {
     for ( let i = 0; i < ArtId.length; i++) {
         // 要新增的標籤 article
         let art = document.createElement("article");
+        let h1 = document.createElement("h1");
 
         // 新增 article 的 id
         art.setAttribute("id", ArtId[i]); 
+        h1.setAttribute("id",ArtH1[i]);
 
         // 在框架內新增子元素 main > article
         Main.appendChild(art);
+        art.appendChild(h1);
 
         // 標籤要在 #contactbox 之上
         let Con = document.getElementById("contactbox");
         Con.before(art);
+
+        // 置入文字
+        h1.innerHTML = ArtH1Con[i];
+    }
+
+    let Por = document.getElementById("portfoliobox");
+
+    for ( let i = 0; i < ArtH1PorDiv.length; i++ ) {
+        let div = document.createElement("div");
+
+        div.setAttribute("id", ArtH1PorDiv[i]);
+
+        Por.appendChild(div);
+
+        div.innerHTML = ArtH1PorDivH1[i];
     }
 };
 
