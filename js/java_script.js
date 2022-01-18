@@ -1,12 +1,11 @@
 // AddArticle();
-AddArticle();
+AddArticles();
 function AddArticles() {
     // 陣列 id
     let ArtId = ['portfoliobox','aboutbox','projectbox'];
     let ArtH1 = ['portfoliotitle','abouttitle','projecttitle'];
     let ArtH1Con = ['作品分享','關於峯瑩','專案項目'];
-    let ArtH1PorDiv = ['MGraphic','MAudio','MWeb'];
-    let ArtH1PorDivH1 = ['平面作品','影音作品','網頁作品'];
+    let ArtDiv = ['PorCon','AboCon','ProCon'];
 
     // 主要的 article id=main
     let Main = document.getElementById("main");
@@ -16,14 +15,17 @@ function AddArticles() {
         // 要新增的標籤 article
         let art = document.createElement("article");
         let h1 = document.createElement("h1");
+        let div = document.createElement("div");
 
         // 新增 article 的 id
         art.setAttribute("id", ArtId[i]); 
         h1.setAttribute("id",ArtH1[i]);
+        div.setAttribute("class", ArtDiv[i]);
 
         // 在框架內新增子元素 main > article
         Main.appendChild(art);
         art.appendChild(h1);
+        art.appendChild(div);
 
         // 標籤要在 #contactbox 之上
         let Con = document.getElementById("contactbox");
@@ -33,17 +35,8 @@ function AddArticles() {
         h1.innerHTML = ArtH1Con[i];
     }
 
-    let Por = document.getElementById("portfoliobox");
-
-    for ( let i = 0; i < ArtH1PorDiv.length; i++ ) {
-        let div = document.createElement("div");
-
-        div.setAttribute("id", ArtH1PorDiv[i]);
-
-        Por.appendChild(div);
-
-        div.innerHTML = ArtH1PorDivH1[i];
-    }
+    // 將網頁資料，用載入的方式置入框架中
+    $('.PorCon').load('../webs/graphic.html');
 };
 
 // JQuery 語法
