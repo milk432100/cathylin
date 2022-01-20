@@ -277,6 +277,8 @@ header {
                 .SmallImg {
                     width: 100vw;
                     float: left;
+                    // 切換動畫
+                    transition: transform 1.5s;
                 }
                 > .SmallImg:hover {
                     animation-play-state: paused;
