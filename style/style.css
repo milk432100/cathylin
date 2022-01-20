@@ -233,26 +233,6 @@ header nav #contact {
   header #BannerBox > .RadioBox > input[type=radio]:nth-of-type(5):checked ~ .Controls_Visible label:nth-of-type(5) {
     background-color: #d9ff7f;
   }
-  header #BannerBox > .RadioBox > input[type=radio]:nth-of-type(1):checked ~ .ImgBox > a > .SmallImg {
-    -webkit-transform: translateX(0vw);
-            transform: translateX(0vw);
-  }
-  header #BannerBox > .RadioBox > input[type=radio]:nth-of-type(2):checked ~ .ImgBox > a > .SmallImg {
-    -webkit-transform: translateX(-100vw);
-            transform: translateX(-100vw);
-  }
-  header #BannerBox > .RadioBox > input[type=radio]:nth-of-type(3):checked ~ .ImgBox > a > .SmallImg {
-    -webkit-transform: translateX(-200vw);
-            transform: translateX(-200vw);
-  }
-  header #BannerBox > .RadioBox > input[type=radio]:nth-of-type(4):checked ~ .ImgBox > a > .SmallImg {
-    -webkit-transform: translateX(-300vw);
-            transform: translateX(-300vw);
-  }
-  header #BannerBox > .RadioBox > input[type=radio]:nth-of-type(5):checked ~ .ImgBox > a > .SmallImg {
-    -webkit-transform: translateX(-400vw);
-            transform: translateX(-400vw);
-  }
   header #BannerBox > .RadioBox > .ImgBox {
     width: 500vw;
   }
@@ -592,26 +572,6 @@ header nav #contact {
   }
   header #BannerBox > .RadioBox > input[type=radio]:nth-of-type(5):checked ~ .Controls_Visible label:nth-of-type(5) {
     background-color: #d9ff7f;
-  }
-  header #BannerBox > .RadioBox > input[type=radio]:nth-of-type(1):checked ~ .ImgBox > a > .SmallImg {
-    -webkit-transform: translateX(0vw);
-            transform: translateX(0vw);
-  }
-  header #BannerBox > .RadioBox > input[type=radio]:nth-of-type(2):checked ~ .ImgBox > a > .SmallImg {
-    -webkit-transform: translateX(-100vw);
-            transform: translateX(-100vw);
-  }
-  header #BannerBox > .RadioBox > input[type=radio]:nth-of-type(3):checked ~ .ImgBox > a > .SmallImg {
-    -webkit-transform: translateX(-200vw);
-            transform: translateX(-200vw);
-  }
-  header #BannerBox > .RadioBox > input[type=radio]:nth-of-type(4):checked ~ .ImgBox > a > .SmallImg {
-    -webkit-transform: translateX(-300vw);
-            transform: translateX(-300vw);
-  }
-  header #BannerBox > .RadioBox > input[type=radio]:nth-of-type(5):checked ~ .ImgBox > a > .SmallImg {
-    -webkit-transform: translateX(-400vw);
-            transform: translateX(-400vw);
   }
   header #BannerBox > .RadioBox > .ImgBox {
     width: 500vw;

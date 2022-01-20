@@ -1,5 +1,8 @@
 // 迴圈 寫入html 畫面
 AddArticle();
+TopBtn();
+BannerChange();
+
 function AddArticle() {
     // 陣列 id
     let ArtId = ['portfoliobox','aboutbox','projectbox'];
@@ -54,7 +57,7 @@ $('.close').click( function() {
     $('#mobilenav').hide();
    });
 
-TopBtn();
+
 // 控制 Top 按鈕
 function TopBtn() {
     // 宣告變數 指向 Top 之下 a 標籤
@@ -79,4 +82,52 @@ function TopBtn() {
             Top.stop().fadeOut(222);
         }
     });
+}
+
+// 控制 Banner 
+function BannerChange() {
+    // 宣告按鈕變數
+    let P01 = document.getElementById('P01');
+    let P02 = document.getElementById('P02');
+    let P03 = document.getElementById('P03');
+    let P04 = document.getElementById('P04');
+    let P05 = document.getElementById('P05');
+    let Images = document.getElementById('Images');
+
+    // 按鈕執行的動作 
+    $(P01).click(function(){
+        $(Images).css({
+            transform: 'translatex(0vw)',
+            transition: 'transform 1.5s'
+        })
+    });
+
+    $(P02).click(function(){
+        $(Images).css({
+            transform: 'translatex(-100vw)',
+            transition: 'transform 1.5s'
+        })
+    });
+   
+    $(P03).click(function(){
+        $(Images).css({
+            transform: 'translatex(-200vw)',
+            transition: 'transform 1.5s'
+        })
+    });
+   
+    $(P04).click(function(){
+        $(Images).css({
+            transform: 'translatex(-300vw)',
+            transition: 'transform 1.5s'
+        })
+    });
+  
+    $(P05).click(function(){
+        $(Images).css({
+            transform: 'translatex(-400vw)',
+            transition: 'transform 1.5s'
+        })
+    });
+
 }
