@@ -94,39 +94,44 @@ function BannerChange() {
     let P05 = document.getElementById('P05');
     let Images = document.getElementById('Images');
 
-    // 按鈕執行的動作 
-    $(P01).click(function(){
-        $(Images).css({
-            transform: 'translatex(0vw)',
-            transition: 'transform 1.5s'
-        })
+    // 按鈕執行的動作  
+    $(P01).click(function() {
+        // jQuery 函式庫語法
+        // $(Images).css({
+        //     transform: 'translateX(0vw)',
+        //     transition: 'transform 1s'
+        // })
+
+        // javascript 的語法
+        Images.style.transform = 'translateX(0vw)';
+        Images.style.transtition = 'transform 1s';
     });
 
-    $(P02).click(function(){
+    $(P02).click(function() {
         $(Images).css({
-            transform: 'translatex(-100vw)',
-            transition: 'transform 1.5s'
+            transform: 'translateX(-100vw)',
+            transition: 'transform 1s'
         })
     });
    
-    $(P03).click(function(){
+    $(P03).click(function() {
         $(Images).css({
-            transform: 'translatex(-200vw)',
-            transition: 'transform 1.5s'
+            transform: 'translateX(-200vw)',
+            transition: 'transform 1s'
         })
     });
    
-    $(P04).click(function(){
+    $(P04).click(function() {
         $(Images).css({
-            transform: 'translatex(-300vw)',
-            transition: 'transform 1.5s'
+            transform: 'translateX(-300vw)',
+            transition: 'transform 1s'
         })
     });
   
-    $(P05).click(function(){
+    $(P05).click(function() {
         $(Images).css({
-            transform: 'translatex(-400vw)',
-            transition: 'transform 1.5s'
+            transform: 'translateX(-400vw)',
+            transition: 'transform 1s'
         })
     });
 
